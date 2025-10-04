@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADM Answer Bank - Advanced Database Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-database"></i>
+                <h1>ADM Answer Bank</h1>
+                <span class="subtitle">Advanced Database Management Knowledge Hub</span>
+            </div>
+            <div class="navigation">
+                <button class="nav-btn" data-section="overview">Overview</button>
+                <button class="nav-btn" data-section="2marks">2-Mark Questions</button>
+                <button class="nav-btn active" data-section="4marks">4-Mark Questions</button>
+                <button class="nav-btn" data-section="concepts">Key Concepts</button>
+            </div>
+            <div class="search-container">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search questions, answers, or concepts..." id="searchInput">
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Overview Section -->
+            <section id="overview" class="questions-section">
+                <h2 class="section-title">
+                    <i class="fas fa-chart-line"></i>
+                    Overview
+                </h2>
+                <p class="section-subtitle">Database Management Concepts & Fundamentals</p>
+                <div class="overview-content">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">20</div>
+                            <div class="stat-label">Total Questions</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">10</div>
+                            <div class="stat-label">4-Mark Questions</div>
+                        </div>
+                         <div class="stat-card">
+                             <div class="stat-number">10</div>
+                             <div class="stat-label">2-Mark Questions</div>
+                         </div>
+                         <div class="stat-card">
+                             <div class="stat-number">60</div>
+                             <div class="stat-label">Total Marks</div>
+                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4 Marks Questions Section -->
+            <section id="4marks" class="questions-section active">
+                <h2 class="section-title">
+                    <i class="fas fa-star"></i>
+                    4-Mark Questions
+                </h2>
+                <p class="section-subtitle">Detailed Explanations & Implementations</p>
+                
+                <div class="questions-grid">
+                    <!-- Question 1 -->
+                    <div class="question-card" data-question="1">
+                        <div class="question-header">
+                            <span class="question-number">1</span>
+                            <span class="question-title">Differentiate between SQL and NoSQL database</span>
+                        </div>
+                        <div class="answer" id="answer-1">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>SQL vs NoSQL Databases - Comprehensive Comparison</h4>
+                                
+                                <ul class="answer-bullets">
+                                    <li><strong>SQL Databases (Relational):</strong>
+                                        <ul>
+                                            <li>Structure: Tabular format with rows and columns, follows relational model</li>
+                                            <li>Schema: Fixed, predefined structure requiring all data to conform</li>
+                                            <li>ACID Properties: Atomicity, Consistency, Isolation, Durability fully guaranteed</li>
+                                            <li>Scalability: Vertical scaling (adding more powerful hardware)</li>
+                                            <li>Query Language: SQL (Structured Query Language) - standardized</li>
+                                            <li>Relationships: Strong support via foreign keys, joins, and referential integrity</li>
+                                            <li>Data Consistency: Strong consistency model</li>
+                                            <li>Use Cases: Financial systems, ERP, traditional business applications</li>
+                                            <li>Examples: MySQL, PostgreSQL, Oracle, SQL Server, SQLite</li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>NoSQL Databases (Non-Relational):</strong>
+                                        <ul>
+                                            <li>Structure: Flexible models - document, key-value, column-family, graph</li>
+                                            <li>Schema: Schema-less or flexible, varying structures within same collection</li>
+                                            <li>ACID Properties: BASE model (Basically Available, Soft state, Eventual consistency)</li>
+                                            <li>Scalability: Excellent horizontal scaling across multiple servers</li>
+                                            <li>Query Language: Database-specific (MongoDB Query Language, CQL, etc.)</li>
+                                            <li>Relationships: Limited support, focuses on denormalization for performance</li>
+                                            <li>Data Consistency: Eventual consistency model</li>
+                                            <li>Use Cases: Big data, real-time apps, content management, IoT</li>
+                                            <li>Examples: MongoDB (Document), Cassandra (Column), Redis (Key-Value), Neo4j (Graph)</li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>Key Differences:</strong>
+                                        <ul>
+                                            <li>Performance: SQL optimized for complex queries; NoSQL for simple queries and high throughput</li>
+                                            <li>Development Speed: SQL requires careful schema design; NoSQL allows rapid development</li>
+                                            <li>Data Volume: SQL handles structured data well; NoSQL excels with unstructured datasets</li>
+                                            <li>Team Skills: SQL has standardized skills; NoSQL requires database-specific knowledge</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                
+                                <div class="detailed-explanation">
+                                    <h5><i class="fas fa-lightbulb"></i> Key Differences Explained:</h5>
+                                    <div class="explanation-grid">
+                                        <div class="explanation-item">
+                                            <h6>Data Model:</h6>
+                                            <p>SQL uses relational model with tables, while NoSQL uses various models like documents, key-value pairs, columns, or graphs.</p>
+                                        </div>
+                                        <div class="explanation-item">
+                                            <h6>Consistency:</h6>
+                                            <p>SQL prioritizes consistency (ACID), while NoSQL often prioritizes availability and partition tolerance (CAP theorem).</p>
+                                        </div>
+                                        <div class="explanation-item">
+                                            <h6>Performance:</h6>
+                                            <p>SQL optimized for complex queries and transactions. NoSQL optimized for simple queries and high throughput.</p>
+                                        </div>
+                                        <div class="explanation-item">
+                                            <h6>Development:</h6>
+                                            <p>SQL requires careful schema design upfront. NoSQL allows rapid development with flexible schema.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="question-card" data-question="2">
+                        <div class="question-header">
+                            <span class="question-number">Q2</span>
+                            <span class="marks">4 Marks</span>
+                        </div>
+                        <div class="question-content">
+                            <h3>Explain 4 types of NoSQL database with diagram</h3>
+                            <div class="answer" id="answer-2">
+                                <div class="answer-header">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Answer</span>
+                                </div>
+                                <div class="answer-content">
+                                    <h4>4 Types of NoSQL Databases</h4>
+                                    
+                                    <ul class="answer-bullets">
+                                        <li><strong>1. Document Databases:</strong>
+                                            <ul>
+                                                <li>Storage Format: Data stored as documents (JSON, BSON, XML)</li>
+                                                <li>Schema: Flexible schema - documents can have different structures</li>
+                                                <li>Use Cases: Content management, user profiles, product catalogs</li>
+                                                <li>Query Capabilities: Rich query language with complex queries and aggregation</li>
+                                                <li>Examples: MongoDB, CouchDB, Amazon DocumentDB, Azure Cosmos DB</li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li><strong>2. Column-Family Databases:</strong>
+                                            <ul>
+                                                <li>Storage Format: Data organized in column families (groups of related columns)</li>
+                                                <li>Schema: Sparse schema - not all rows need all columns</li>
+                                                <li>Use Cases: Time-series data, IoT applications, analytics</li>
+                                                <li>Query Capabilities: Fast reads and writes, excellent for analytics</li>
+                                                <li>Examples: Cassandra, HBase, Amazon DynamoDB, Google Bigtable</li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li><strong>3. Key-Value Databases:</strong>
+                                            <ul>
+                                                <li>Storage Format: Simple key-value pairs for data storage</li>
+                                                <li>Schema: No schema - values can be any data type</li>
+                                                <li>Use Cases: Caching, session storage, real-time recommendations</li>
+                                                <li>Query Capabilities: Very fast read/write operations</li>
+                                                <li>Examples: Redis, Amazon DynamoDB, Riak, Oracle NoSQL Database</li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li><strong>4. Graph Databases:</strong>
+                                            <ul>
+                                                <li>Storage Format: Data stored as nodes (entities) and edges (relationships)</li>
+                                                <li>Schema: Flexible schema - nodes and edges can have properties</li>
+                                                <li>Use Cases: Social networks, fraud detection, recommendation engines</li>
+                                                <li>Query Capabilities: Graph traversal queries, pattern matching</li>
+                                                <li>Examples: Neo4j, Amazon Neptune, ArangoDB, OrientDB</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="nosql-comparison">
+                                    <h5><i class="fas fa-balance-scale"></i> NoSQL Types Comparison:</h5>
+                                    <div class="comparison-table">
+                                        <div class="comparison-row header">
+                                            <div>Type</div>
+                                            <div>Best For</div>
+                                            <div>Complexity</div>
+                                            <div>Scalability</div>
+                                        </div>
+                                        <div class="comparison-row">
+                                            <div>Document</div>
+                                            <div>Complex objects, rapid development</div>
+                                            <div>Medium</div>
+                                            <div>High</div>
+                                        </div>
+                                        <div class="comparison-row">
+                                            <div>Column-Family</div>
+                                            <div>Analytics, time-series data</div>
+                                            <div>Medium</div>
+                                            <div>Very High</div>
+                                        </div>
+                                        <div class="comparison-row">
+                                            <div>Key-Value</div>
+                                            <div>Simple data, high performance</div>
+                                            <div>Low</div>
+                                            <div>Very High</div>
+                                        </div>
+                                        <div class="comparison-row">
+                                            <div>Graph</div>
+                                            <div>Relationship-heavy data</div>
+                                            <div>High</div>
+                                            <div>Medium</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="diagram-container">
+                                    <h4>NoSQL Database Types Diagram</h4>
+                                    <div class="diagram">
+                                        <div class="diagram-center">
+                                            <div class="center-node">NoSQL Databases</div>
+                                        </div>
+                                        <div class="diagram-branches">
+                                            <div class="branch" data-type="document">
+                                                <div class="branch-node">Document</div>
+                                                <div class="branch-details">JSON/BSON<br>MongoDB</div>
+                                            </div>
+                                            <div class="branch" data-type="column">
+                                                <div class="branch-node">Column-Family</div>
+                                                <div class="branch-details">Columns<br>Cassandra</div>
+                                            </div>
+                                            <div class="branch" data-type="keyvalue">
+                                                <div class="branch-node">Key-Value</div>
+                                                <div class="branch-details">Key-Value Pairs<br>Redis</div>
+                                            </div>
+                                            <div class="branch" data-type="graph">
+                                                <div class="branch-node">Graph</div>
+                                                <div class="branch-details">Nodes & Edges<br>Neo4j</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="question-card" data-question="3">
+                        <div class="question-header">
+                            <span class="question-number">Q3</span>
+                            <span class="marks">4 Marks</span>
+                        </div>
+                        <div class="question-content">
+                            <h3>What is meant by querying in MongoDB (find() function)</h3>
+                        <div class="answer" id="answer-3">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>MongoDB Querying - find() Function</h4>
+                                <p>Querying in MongoDB is the process of retrieving data from collections using various methods, primarily the <code>find()</code> function. MongoDB uses a document-oriented query language that provides flexible and powerful data retrieval capabilities.</p>
+                                
+                                <ul class="answer-bullets">
+                                    <li><strong>Core Concepts:</strong>
+                                        <ul>
+                                            <li>Collections: Similar to tables in SQL but with flexible document structures</li>
+                                            <li>Documents: BSON (Binary JSON) objects representing data records</li>
+                                            <li>Queries: JavaScript-like objects that specify search criteria</li>
+                                            <li>Projections: Specify which fields to return in results</li>
+                                            <li>Indexes: Improve query performance through optimized data structures</li>
+                                            <li>Cursors: Pointers to result sets that can be iterated</li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>find() Function Syntax:</strong>
+                                        <ul>
+                                            <li>Basic syntax: <code>db.collection.find(query, projection, options)</code></li>
+                                            <li>Query: Document specifying selection criteria (optional, empty {} for all documents)</li>
+                                            <li>Projection: Document specifying fields to return (optional, 1 to include, 0 to exclude)</li>
+                                            <li>Options: Document specifying query options like limit, sort, skip (optional)</li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>Common Examples:</strong>
+                                        <ul>
+                                            <li>Find all documents: <code>db.users.find()</code></li>
+                                            <li>Find with filter: <code>db.users.find({"age": 25})</code></li>
+                                            <li>Find with projection: <code>db.users.find({}, {"name": 1, "email": 1})</code></li>
+                                            <li>Find with operators: <code>db.users.find({"age": {"$gt": 18}})</code></li>
+                                            <li>Find with logical operators: <code>db.users.find({"$or": [{"age": {"$gt": 30}}, {"city": "New York"}]})</code></li>
+                                            <li>Find with array operations: <code>db.users.find({"skills": {"$in": ["JavaScript", "Python"]}})</code></li>
+                                            <li>Find with embedded documents: <code>db.users.find({"address.city": "New York"})</code></li>
+                                            <li>Find with sorting and limiting: <code>db.users.find().sort({"age": -1}).limit(5)</code></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>Query Operators:</strong>
+                                        <ul>
+                                            <li>Comparison: $eq, $gt, $gte, $lt, $lte, $ne</li>
+                                            <li>Logical: $and, $or, $not, $nor</li>
+                                            <li>Array: $in, $nin, $all, $size</li>
+                                            <li>Element: $exists, $type</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                    
+                                    <div class="query-operators">
+                                        <h5><i class="fas fa-tools"></i> Common Query Operators:</h5>
+                                        <div class="operators-grid">
+                                            <div class="operator-category">
+                                                <h6>Comparison Operators:</h6>
+                                                <ul>
+                                                    <li><code>$eq</code> - Equal to</li>
+                                                    <li><code>$gt</code> - Greater than</li>
+                                                    <li><code>$gte</code> - Greater than or equal</li>
+                                                    <li><code>$lt</code> - Less than</li>
+                                                    <li><code>$lte</code> - Less than or equal</li>
+                                                    <li><code>$ne</code> - Not equal to</li>
+                                                </ul>
+                                            </div>
+                                            <div class="operator-category">
+                                                <h6>Logical Operators:</h6>
+                                                <ul>
+                                                    <li><code>$and</code> - Logical AND</li>
+                                                    <li><code>$or</code> - Logical OR</li>
+                                                    <li><code>$not</code> - Logical NOT</li>
+                                                    <li><code>$nor</code> - Logical NOR</li>
+                                                </ul>
+                                            </div>
+                                            <div class="operator-category">
+                                                <h6>Array Operators:</h6>
+                                                <ul>
+                                                    <li><code>$in</code> - Matches any value in array</li>
+                                                    <li><code>$nin</code> - Matches no value in array</li>
+                                                    <li><code>$all</code> - Matches all values in array</li>
+                                                    <li><code>$size</code> - Matches array size</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="question-card" data-question="4">
+                        <div class="question-header">
+                            <span class="question-number">Q4</span>
+                            <span class="marks">4 Marks</span>
+                        </div>
+                        <div class="question-content">
+                            <h3>With the help of diagram describe data warehouse life cycle</h3>
+                            <div class="answer" id="answer-4">
+                                <div class="answer-header">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Answer</span>
+                                </div>
+                                <div class="answer-content">
+                                    <h4>Data Warehouse Life Cycle</h4>
+                                    
+                                    <ul class="answer-bullets">
+                                        <li><strong>1. Planning & Analysis:</strong>
+                                            <ul>
+                                                <li>Define business requirements and strategic goals</li>
+                                                <li>Identify business stakeholders and their needs</li>
+                                                <li>Define scope and objectives</li>
+                                                <li>Conduct feasibility study</li>
+                                                <li>Create project timeline and budget</li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li><strong>2. Design:</strong>
+                                            <ul>
+                                                <li>Create technical architecture and data models</li>
+                                                <li>Design dimensional data model (star/snowflake schema)</li>
+                                                <li>Define ETL processes and data flow</li>
+                                                <li>Plan infrastructure and technology stack</li>
+                                                <li>Create metadata management strategy</li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li><strong>3. Development:</strong>
+                                            <ul>
+                                                <li>Build and implement the data warehouse</li>
+                                                <li>Develop ETL processes and data pipelines</li>
+                                                <li>Create data warehouse database structure</li>
+                                                <li>Build data marts and OLAP cubes</li>
+                                                <li>Implement data quality controls</li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li><strong>4. Testing:</strong>
+                                            <ul>
+                                                <li>Ensure quality and performance</li>
+                                                <li>Data quality testing and validation</li>
+                                                <li>Performance testing and optimization</li>
+                                                <li>User acceptance testing</li>
+                                                <li>Security and backup testing</li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li><strong>5. Deployment:</strong>
+                                            <ul>
+                                                <li>Go live with production system</li>
+                                                <li>Deploy to production environment</li>
+                                                <li>Migrate historical data</li>
+                                                <li>Train end users and administrators</li>
+                                                <li>Establish monitoring and support processes</li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li><strong>6. Maintenance:</strong>
+                                            <ul>
+                                                <li>Ongoing operations and improvements</li>
+                                                <li>Monitor performance and data quality</li>
+                                                <li>Regular data updates and ETL maintenance</li>
+                                                <li>User support and training</li>
+                                                <li>Continuous improvement and enhancements</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="question-card" data-question="5">
+                        <div class="question-header">
+                            <span class="question-number">Q5</span>
+                            <span class="marks">4 Marks</span>
+                        </div>
+                        <div class="question-content">
+                            <h3>Explain the architecture of Data Mining</h3>
+                            <div class="answer" id="answer-5">
+                                <div class="architecture-content">
+                                    <h4><i class="fas fa-sitemap"></i> Data Mining Architecture</h4>
+                                    <p>Data mining architecture consists of multiple layers that work together to extract meaningful patterns from data.</p>
+                                    
+                                    <div class="architecture-layers">
+                                        <div class="layer">
+                                            <h5><i class="fas fa-chart-line"></i> Presentation Layer</h5>
+                                            <p>Visualization tools, dashboards, and reporting interfaces for end users</p>
+                                        </div>
+                                        <div class="layer">
+                                            <h5><i class="fas fa-cogs"></i> Application Layer</h5>
+                                            <p>Data mining algorithms, statistical analysis, and pattern recognition tools</p>
+                                        </div>
+                                        <div class="layer">
+                                            <h5><i class="fas fa-database"></i> Data Layer</h5>
+                                            <p>Data warehouse, data marts, and operational databases</p>
+                                        </div>
+                                        <div class="layer">
+                                            <h5><i class="fas fa-server"></i> Infrastructure Layer</h5>
+                                            <p>Hardware, network, and system software support</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="question-card" data-question="6">
+                        <div class="question-header">
+                            <span class="question-number">Q6</span>
+                            <span class="marks">4 Marks</span>
+                        </div>
+                        <div class="question-content">
+                            <h3>With the help of diagram describe components of Data Warehouse</h3>
+                            <div class="answer" id="answer-6">
+                                <div class="components-content">
+                                    <h4><i class="fas fa-puzzle-piece"></i> Data Warehouse Components</h4>
+                                    
+                                    <div class="warehouse-components">
+                                        <div class="component-group">
+                                            <h5>Data Sources</h5>
+                                            <div class="component">Operational Databases</div>
+                                            <div class="component">External Data</div>
+                                            <div class="component">Flat Files</div>
+                                        </div>
+                                        
+                                        <div class="component-group">
+                                            <h5>ETL Process</h5>
+                                            <div class="component">Extract</div>
+                                            <div class="component">Transform</div>
+                                            <div class="component">Load</div>
+                                        </div>
+                                        
+                                        <div class="component-group">
+                                            <h5>Storage</h5>
+                                            <div class="component">Data Warehouse</div>
+                                            <div class="component">Data Marts</div>
+                                            <div class="component">Metadata</div>
+                                        </div>
+                                        
+                                        <div class="component-group">
+                                            <h5>Access Tools</h5>
+                                            <div class="component">OLAP Tools</div>
+                                            <div class="component">Reporting Tools</div>
+                                            <div class="component">Data Mining</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 7 -->
+                    <div class="question-card" data-question="7">
+                        <div class="question-header">
+                            <span class="question-number">Q7</span>
+                            <span class="marks">4 Marks</span>
+                        </div>
+                        <div class="question-content">
+                            <h3>What is XML Schema. Illustrate it with an example</h3>
+                            <div class="answer" id="answer-7">
+                                <div class="xml-schema-content">
+                                    <h4><i class="fas fa-code"></i> XML Schema</h4>
+                                    <p>XML Schema is a language for describing the structure and constraints of XML documents. It provides a way to define elements, attributes, data types, and relationships.</p>
+                                    
+                                    <div class="schema-example">
+                                        <h5>Example XML Schema:</h5>
+                                        <div class="code-block">
+                                            <code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:element name="book"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="title" type="xs:string"/&gt;
+        &lt;xs:element name="author" type="xs:string"/&gt;
+        &lt;xs:element name="price" type="xs:decimal"/&gt;
+        &lt;xs:element name="year" type="xs:integer"/&gt;
+      &lt;/xs:sequence&gt;
+      &lt;xs:attribute name="id" type="xs:integer" use="required"/&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</code>
+                                        </div>
+                                        
+                                        <h5>Corresponding XML Document:</h5>
+                                        <div class="code-block">
+                                            <code>&lt;book id="1"&gt;
+  &lt;title&gt;Database Systems&lt;/title&gt;
+  &lt;author&gt;John Smith&lt;/author&gt;
+  &lt;price&gt;45.99&lt;/price&gt;
+  &lt;year&gt;2023&lt;/year&gt;
+&lt;/book&gt;</code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 8 -->
+                    <div class="question-card" data-question="8">
+                        <div class="question-header">
+                            <span class="question-number">Q8</span>
+                            <span class="marks">4 Marks</span>
+                        </div>
+                        <div class="question-content">
+                            <h3>State difference between structured and unstructured data</h3>
+                            <div class="answer" id="answer-8">
+                                <div class="comparison-grid">
+                                    <div class="comparison-item">
+                                        <h4><i class="fas fa-table"></i> Structured Data</h4>
+                                        <ul>
+                                            <li><strong>Format:</strong> Fixed schema, tabular format</li>
+                                            <li><strong>Storage:</strong> Relational databases, spreadsheets</li>
+                                            <li><strong>Examples:</strong> Customer records, transaction data</li>
+                                            <li><strong>Processing:</strong> Easy to query and analyze</li>
+                                            <li><strong>Tools:</strong> SQL, Excel, traditional BI tools</li>
+                                            <li><strong>Volume:</strong> Typically smaller datasets</li>
+                                        </ul>
+                                    </div>
+                                    <div class="comparison-item">
+                                        <h4><i class="fas fa-file-alt"></i> Unstructured Data</h4>
+                                        <ul>
+                                            <li><strong>Format:</strong> No fixed schema, various formats</li>
+                                            <li><strong>Storage:</strong> NoSQL databases, file systems</li>
+                                            <li><strong>Examples:</strong> Text documents, images, videos</li>
+                                            <li><strong>Processing:</strong> Requires specialized tools</li>
+                                            <li><strong>Tools:</strong> NLP, machine learning, Hadoop</li>
+                                            <li><strong>Volume:</strong> Typically larger datasets</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 9 -->
+                    <div class="question-card" data-question="9">
+                        <div class="question-header">
+                            <span class="question-number">Q9</span>
+                            <span class="marks">4 Marks</span>
+                        </div>
+                        <div class="question-content">
+                            <h3>What is Virtual Warehouse? List its benefits</h3>
+                            <div class="answer" id="answer-9">
+                                <div class="virtual-warehouse-content">
+                                    <h4><i class="fas fa-cloud"></i> Virtual Warehouse</h4>
+                                    <p>A virtual warehouse is a logical view of data that provides real-time access to data from multiple sources without physically moving or copying the data.</p>
+                                    
+                                    <div class="benefits-grid">
+                                        <div class="benefit-item">
+                                            <h5><i class="fas fa-rocket"></i> Real-time Access</h5>
+                                            <p>Provides immediate access to current data without delays</p>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <h5><i class="fas fa-dollar-sign"></i> Cost Effective</h5>
+                                            <p>Reduces storage costs by eliminating data duplication</p>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <h5><i class="fas fa-sync"></i> Data Consistency</h5>
+                                            <p>Ensures users always see the most current data</p>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <h5><i class="fas fa-expand-arrows-alt"></i> Scalability</h5>
+                                            <p>Easily scales to accommodate growing data sources</p>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <h5><i class="fas fa-shield-alt"></i> Security</h5>
+                                            <p>Centralized security and access control</p>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <h5><i class="fas fa-tools"></i> Easy Maintenance</h5>
+                                            <p>Simplified maintenance and administration</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 10 -->
+                    <div class="question-card" data-question="10">
+                        <div class="question-header">
+                            <span class="question-number">Q10</span>
+                            <span class="marks">4 Marks</span>
+                        </div>
+                        <div class="question-content">
+                            <h3>What is Data Lake House? State its architecture diagrammatically</h3>
+                            <div class="answer" id="answer-10">
+                                <div class="data-lakehouse-content">
+                                    <h4><i class="fas fa-water"></i> Data Lake House</h4>
+                                    <p>A Data Lake House combines the benefits of data lakes and data warehouses, providing both structured and unstructured data processing capabilities.</p>
+                                    
+                                    <div class="lakehouse-features">
+                                        <div class="feature">
+                                            <h5><i class="fas fa-database"></i> Data Lake Benefits</h5>
+                                            <p>Flexible storage for raw data, cost-effective, supports various formats</p>
+                                        </div>
+                                        <div class="feature">
+                                            <h5><i class="fas fa-warehouse"></i> Data Warehouse Benefits</h5>
+                                            <p>Structured queries, ACID transactions, optimized for analytics</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="architecture-diagram">
+                                        <h5>Data Lake House Architecture</h5>
+                                        <div class="architecture-layers">
+                                            <div class="layer">
+                                                <h6>Analytics Layer</h6>
+                                                <div class="layer-items">
+                                                    <span>BI Tools</span>
+                                                    <span>Machine Learning</span>
+                                                    <span>Data Science</span>
+                                                </div>
+                                            </div>
+                                            <div class="layer">
+                                                <h6>Processing Layer</h6>
+                                                <div class="layer-items">
+                                                    <span>ETL/ELT</span>
+                                                    <span>Stream Processing</span>
+                                                    <span>Batch Processing</span>
+                                                </div>
+                                            </div>
+                                            <div class="layer">
+                                                <h6>Storage Layer</h6>
+                                                <div class="layer-items">
+                                                    <span>Raw Data Lake</span>
+                                                    <span>Curated Data</span>
+                                                    <span>Data Warehouse</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- Key Concepts Section -->
+             <section id="concepts" class="questions-section">
+                 <h2 class="section-title">
+                     <i class="fas fa-lightbulb"></i>
+                     Key Concepts
+                 </h2>
+                 <p class="section-subtitle">Essential Database Management Concepts & Definitions</p>
+                 
+                 <div class="concepts-grid">
+                     <div class="concept-card">
+                         <div class="concept-icon">
+                             <i class="fas fa-database"></i>
+                         </div>
+                         <div class="concept-content">
+                             <h3>SQL vs NoSQL</h3>
+                             <p>Relational databases with ACID properties vs non-relational databases with BASE model. SQL uses fixed schema, NoSQL offers flexible schema design.</p>
+                             <div class="concept-tags">
+                                 <span class="tag">ACID</span>
+                                 <span class="tag">BASE</span>
+                                 <span class="tag">Schema</span>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <div class="concept-card">
+                         <div class="concept-icon">
+                             <i class="fas fa-file-alt"></i>
+                         </div>
+                         <div class="concept-content">
+                             <h3>NoSQL Types</h3>
+                             <p>Document (MongoDB), Column-Family (Cassandra), Key-Value (Redis), and Graph (Neo4j) databases. Each optimized for different data patterns.</p>
+                             <div class="concept-tags">
+                                 <span class="tag">Document</span>
+                                 <span class="tag">Graph</span>
+                                 <span class="tag">Column</span>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <div class="concept-card">
+                         <div class="concept-icon">
+                             <i class="fas fa-search"></i>
+                         </div>
+                         <div class="concept-content">
+                             <h3>MongoDB Querying</h3>
+                             <p>Document-oriented querying using find() function with flexible query operators. Supports projections, sorting, and aggregation.</p>
+                             <div class="concept-tags">
+                                 <span class="tag">find()</span>
+                                 <span class="tag">BSON</span>
+                                 <span class="tag">Operators</span>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <div class="concept-card">
+                         <div class="concept-icon">
+                             <i class="fas fa-warehouse"></i>
+                         </div>
+                         <div class="concept-content">
+                             <h3>Data Warehouse</h3>
+                             <p>Centralized repository for analytical data. Life cycle includes planning, design, development, testing, deployment, and maintenance phases.</p>
+                             <div class="concept-tags">
+                                 <span class="tag">ETL</span>
+                                 <span class="tag">OLAP</span>
+                                 <span class="tag">Lifecycle</span>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <div class="concept-card">
+                         <div class="concept-icon">
+                             <i class="fas fa-sitemap"></i>
+                         </div>
+                         <div class="concept-content">
+                             <h3>Data Mining</h3>
+                             <p>Extracting patterns from large datasets using techniques like association rules, clustering, and classification for business intelligence.</p>
+                             <div class="concept-tags">
+                                 <span class="tag">Patterns</span>
+                                 <span class="tag">Clustering</span>
+                                 <span class="tag">Classification</span>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <div class="concept-card">
+                         <div class="concept-icon">
+                             <i class="fas fa-code"></i>
+                         </div>
+                         <div class="concept-content">
+                             <h3>XML Technologies</h3>
+                             <p>XPath for navigation, XQuery for querying, and XML Schema for validation. FLWOR expressions provide powerful XML data manipulation.</p>
+                             <div class="concept-tags">
+                                 <span class="tag">XPath</span>
+                                 <span class="tag">XQuery</span>
+                                 <span class="tag">FLWOR</span>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <div class="concept-card">
+                         <div class="concept-icon">
+                             <i class="fas fa-table"></i>
+                         </div>
+                         <div class="concept-content">
+                             <h3>Data Types</h3>
+                             <p>Structured data follows fixed schema in relational databases. Unstructured data has no predefined format and requires specialized processing.</p>
+                             <div class="concept-tags">
+                                 <span class="tag">Structured</span>
+                                 <span class="tag">Unstructured</span>
+                                 <span class="tag">Schema</span>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <div class="concept-card">
+                         <div class="concept-icon">
+                             <i class="fas fa-cloud"></i>
+                         </div>
+                         <div class="concept-content">
+                             <h3>Virtual Warehouse</h3>
+                             <p>Logical view providing real-time access to data from multiple sources without physical data movement. Offers cost-effective data integration.</p>
+                             <div class="concept-tags">
+                                 <span class="tag">Real-time</span>
+                                 <span class="tag">Cost-effective</span>
+                                 <span class="tag">Integration</span>
+                             </div>
+                         </div>
+                     </div>
+                     
+                     <div class="concept-card">
+                         <div class="concept-icon">
+                             <i class="fas fa-water"></i>
+                         </div>
+                         <div class="concept-content">
+                             <h3>Data Lake House</h3>
+                             <p>Combines data lake flexibility with data warehouse structure. Supports both raw data storage and structured analytics on same platform.</p>
+                             <div class="concept-tags">
+                                 <span class="tag">Data Lake</span>
+                                 <span class="tag">Data Warehouse</span>
+                                 <span class="tag">Hybrid</span>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </section>
+
+             <!-- 2 Marks Questions Section -->
+             <section id="2marks" class="questions-section">
+                 <h2 class="section-title">
+                     <i class="fas fa-tree"></i>
+                     2 Marks Questions
+                 </h2>
+                
+                <div class="questions-grid">
+                    <!-- Question 1 -->
+                    <div class="question-card" data-question="1">
+                        <div class="question-header">
+                            <span class="question-number">Q1</span>
+                            <span class="marks">2 Marks</span>
+                        </div>
+                        <div class="question-content">
+                            <h3>Write down advantages and disadvantages of MongoDB</h3>
+                            <div class="answer" id="answer-1">
+                                <div class="comparison-grid">
+                                    <div class="comparison-item advantages">
+                                        <h4><i class="fas fa-check-circle"></i> Advantages</h4>
+                                        <ul>
+                                            <li>Flexible schema design</li>
+                                            <li>Horizontal scaling</li>
+                                            <li>Fast query performance</li>
+                                            <li>JSON-like document structure</li>
+                                            <li>Rich query language</li>
+                                            <li>Easy integration with modern applications</li>
+                                        </ul>
+                                    </div>
+                                    <div class="comparison-item disadvantages">
+                                        <h4><i class="fas fa-times-circle"></i> Disadvantages</h4>
+                                        <ul>
+                                            <li>No ACID transactions (older versions)</li>
+                                            <li>Memory usage can be high</li>
+                                            <li>Limited join capabilities</li>
+                                            <li>Data duplication possible</li>
+                                            <li>Complex queries can be challenging</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="question-card" data-question="2">
+                        <div class="question-header">
+                            <span class="question-number">Q2</span>
+                            <span class="marks">2 Marks</span>
+                        </div>
+                        <div class="question-content">
+                            <h3>Difference between XPath and XQuery (any 2)</h3>
+                            <div class="answer" id="answer-2">
+                                <div class="comparison-grid">
+                                    <div class="comparison-item">
+                                        <h4><i class="fas fa-search"></i> XPath</h4>
+                                        <ul>
+                                            <li><strong>Purpose:</strong> Path language for selecting nodes in XML documents</li>
+                                            <li><strong>Functionality:</strong> Navigate and locate elements in XML</li>
+                                            <li><strong>Usage:</strong> Used within XSLT, XQuery, and other XML technologies</li>
+                                            <li><strong>Syntax:</strong> Uses path expressions with axes and predicates</li>
+                                        </ul>
+                                    </div>
+                                    <div class="comparison-item">
+                                        <h4><i class="fas fa-code"></i> XQuery</h4>
+                                        <ul>
+                                            <li><strong>Purpose:</strong> Query language for XML data sources</li>
+                                            <li><strong>Functionality:</strong> Query, transform, and manipulate XML data</li>
+                                            <li><strong>Usage:</strong> Standalone query language for XML databases</li>
+                                            <li><strong>Syntax:</strong> FLWOR expressions (For, Let, Where, Order by, Return)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="question-card" data-question="3">
+                        <div class="question-header">
+                            <span class="question-number">Q3</span>
+                            <span class="marks">2 Marks</span>
+                        </div>
+                        <div class="question-content">
+                             <h3>Explain basic data types and arrays in MongoDB</h3>
+                             <div class="answer" id="answer-3">
+                                 <div class="answer-header">
+                                     <i class="fas fa-lightbulb"></i>
+                                     <span>Answer</span>
+                                 </div>
+                                 <div class="answer-content">
+                                     <h4>MongoDB Basic Data Types and Arrays</h4>
+                                     
+                                     <ul class="answer-bullets">
+                                         <li><strong>Basic Data Types:</strong>
+                                             <ul>
+                                                 <li><strong>String:</strong> UTF-8 encoded text data for names, descriptions</li>
+                                                 <li><strong>Integer:</strong> 32-bit or 64-bit whole numbers</li>
+                                                 <li><strong>Double:</strong> Floating-point decimal numbers</li>
+                                                 <li><strong>Boolean:</strong> true/false values for logical operations</li>
+                                                 <li><strong>Date:</strong> Date and time objects with built-in manipulation</li>
+                                             </ul>
+                                         </li>
+                                         
+                                         <li><strong>Arrays:</strong>
+                                             <ul>
+                                                 <li>Ordered collections of values in any BSON data type</li>
+                                                 <li>Can store mixed data types in same array (unlike SQL)</li>
+                                                 <li>Support nested arrays and array query operators ($in, $all, $size)</li>
+                                                 <li>Automatically indexed with multikey indexes</li>
+                                             </ul>
+                                         </li>
+                                     </ul>
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="question-card" data-question="4">
+                        <div class="question-header">
+                            <span class="question-number">Q4</span>
+                            <span class="marks">2 Marks</span>
+                        </div>
+                        <div class="question-content">
+                            <h3>Explain the techniques of data mining (Association Rules, Clustering, Classification)</h3>
+                            <div class="answer" id="answer-4">
+                                <div class="mining-techniques">
+                                    <h4><i class="fas fa-search"></i> Data Mining Techniques</h4>
+                                    
+                                    <div class="techniques-grid">
+                                        <div class="technique">
+                                            <h5><i class="fas fa-link"></i> Association Rules</h5>
+                                            <p>Find relationships between items in large datasets. Example: "Customers who buy bread also buy butter"</p>
+                                            <div class="example">Market basket analysis, recommendation systems</div>
+                                        </div>
+                                        
+                                        <div class="technique">
+                                            <h5><i class="fas fa-object-group"></i> Clustering</h5>
+                                            <p>Group similar data points together without predefined categories</p>
+                                            <div class="example">Customer segmentation, image recognition</div>
+                                        </div>
+                                        
+                                        <div class="technique">
+                                            <h5><i class="fas fa-tags"></i> Classification</h5>
+                                            <p>Predict categorical labels for new data based on training examples</p>
+                                            <div class="example">Spam detection, medical diagnosis</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="question-card" data-question="5">
+                        <div class="question-header">
+                            <span class="question-number">Q5</span>
+                            <span class="marks">2 Marks</span>
+                        </div>
+                        <div class="question-content">
+                            <h3>Query question on XQuery</h3>
+                            <div class="answer" id="answer-5">
+                                <div class="xquery-example">
+                                    <h4><i class="fas fa-code"></i> XQuery Example</h4>
+                                    <p><strong>Question:</strong> Find all books published after 2020 with price less than $50</p>
+                                    
+                                    <div class="code-block">
+                                        <code>for $book in doc("books.xml")/books/book
+where $book/year > 2020 and $book/price < 50
+return $book/title</code>
+                                    </div>
+                                    
+                                    <div class="explanation">
+                                        <h5>Explanation:</h5>
+                                        <ul>
+                                            <li><strong>for:</strong> Iterates through each book element</li>
+                                            <li><strong>where:</strong> Filters books based on conditions</li>
+                                            <li><strong>return:</strong> Returns the title of matching books</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="question-card" data-question="6">
+                        <div class="question-header">
+                            <span class="question-number">Q6</span>
+                            <span class="marks">2 Marks</span>
+                        </div>
+                        <div class="question-content">
+                            <h3>Query question on MongoDB</h3>
+                            <div class="answer" id="answer-6">
+                                <div class="mongodb-query-example">
+                                    <h4><i class="fas fa-database"></i> MongoDB Query Example</h4>
+                                    <p><strong>Question:</strong> Find all users with age greater than 25 and city "New York"</p>
+                                    
+                                    <div class="code-block">
+                                        <code>db.users.find({
+  "age": { "$gt": 25 },
+  "address.city": "New York"
+})</code>
+                                    </div>
+                                    
+                                    <div class="explanation">
+                                        <h5>Explanation:</h5>
+                                        <ul>
+                                            <li><strong>find():</strong> Method to query documents</li>
+                                            <li><strong>$gt:</strong> Greater than operator</li>
+                                            <li><strong>Dot notation:</strong> Access nested fields (address.city)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 7 -->
+                    <div class="question-card" data-question="7">
+                        <div class="question-header">
+                            <span class="question-number">Q7</span>
+                            <span class="marks">2 Marks</span>
+                        </div>
+                        <div class="question-content">
+                            <h3>Describe FLWOR Expression</h3>
+                            <div class="answer" id="answer-7">
+                                <div class="flwor-content">
+                                    <h4><i class="fas fa-list-ol"></i> FLWOR Expression</h4>
+                                    <p>FLWOR is an acronym for the main clauses in XQuery expressions that provide powerful querying capabilities.</p>
+                                    
+                                    <div class="flwor-clauses">
+                                        <div class="clause">
+                                            <h5><strong>F</strong>or</h5>
+                                            <p>Iterates over a sequence of items</p>
+                                            <div class="example">for $x in (1, 2, 3)</div>
+                                        </div>
+                                        
+                                        <div class="clause">
+                                            <h5><strong>L</strong>et</h5>
+                                            <p>Binds a variable to a value</p>
+                                            <div class="example">let $price := 100</div>
+                                        </div>
+                                        
+                                        <div class="clause">
+                                            <h5><strong>W</strong>here</h5>
+                                            <p>Filters the results based on conditions</p>
+                                            <div class="example">where $price > 50</div>
+                                        </div>
+                                        
+                                        <div class="clause">
+                                            <h5><strong>O</strong>rder by</h5>
+                                            <p>Sorts the results</p>
+                                            <div class="example">order by $price descending</div>
+                                        </div>
+                                        
+                                        <div class="clause">
+                                            <h5><strong>R</strong>eturn</h5>
+                                            <p>Specifies what to return</p>
+                                            <div class="example">return $price</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 8 -->
+                    <div class="question-card" data-question="8">
+                        <div class="question-header">
+                            <span class="question-number">Q8</span>
+                            <span class="marks">2 Marks</span>
+                        </div>
+                        <div class="question-content">
+                            <h3>Enlist any four applications of Data Mining</h3>
+                            <div class="answer" id="answer-8">
+                                <div class="applications-content">
+                                    <h4><i class="fas fa-cogs"></i> Data Mining Applications</h4>
+                                    
+                                    <div class="applications-grid">
+                                        <div class="application">
+                                            <h5><i class="fas fa-shopping-cart"></i> E-commerce</h5>
+                                            <p>Recommendation systems, customer behavior analysis, fraud detection</p>
+                                        </div>
+                                        
+                                        <div class="application">
+                                            <h5><i class="fas fa-hospital"></i> Healthcare</h5>
+                                            <p>Medical diagnosis, drug discovery, patient monitoring</p>
+                                        </div>
+                                        
+                                        <div class="application">
+                                            <h5><i class="fas fa-university"></i> Finance</h5>
+                                            <p>Credit scoring, risk assessment, algorithmic trading</p>
+                                        </div>
+                                        
+                                        <div class="application">
+                                            <h5><i class="fas fa-envelope"></i> Marketing</h5>
+                                            <p>Customer segmentation, campaign optimization, churn prediction</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Question 9 -->
+                     <div class="question-card" data-question="9">
+                         <div class="question-header">
+                             <span class="question-number">Q9</span>
+                             <span class="marks">2 Marks</span>
+                         </div>
+                         <div class="question-content">
+                             <h3>What is Data Lake?</h3>
+                             <div class="answer" id="answer-9">
+                                 <div class="data-lake-content">
+                                     <h4><i class="fas fa-water"></i> Data Lake</h4>
+                                     <p>A data lake is a centralized repository that allows you to store all your structured and unstructured data at any scale.</p>
+                                     
+                                     <div class="lake-characteristics">
+                                         <div class="characteristic">
+                                             <h5><i class="fas fa-database"></i> Storage</h5>
+                                             <p>Stores raw data in its native format without predefined schema</p>
+                                         </div>
+                                         
+                                         <div class="characteristic">
+                                             <h5><i class="fas fa-expand-arrows-alt"></i> Scalability</h5>
+                                             <p>Can handle massive volumes of data (petabytes, exabytes)</p>
+                                         </div>
+                                         
+                                         <div class="characteristic">
+                                             <h5><i class="fas fa-dollar-sign"></i> Cost-Effective</h5>
+                                             <p>Lower cost storage compared to traditional data warehouses</p>
+                                         </div>
+                                         
+                                         <div class="characteristic">
+                                             <h5><i class="fas fa-cogs"></i> Processing</h5>
+                                             <p>Supports batch processing, real-time analytics, and machine learning</p>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+
+                     <!-- Question 10 -->
+                     <div class="question-card" data-question="10">
+                         <div class="question-header">
+                             <span class="question-number">Q10</span>
+                             <span class="marks">2 Marks</span>
+                         </div>
+                         <div class="question-content">
+                             <h3>Explain data warehouse architecture</h3>
+                             <div class="answer" id="answer-10">
+                                 <div class="answer-header">
+                                     <i class="fas fa-lightbulb"></i>
+                                     <span>Answer</span>
+                                 </div>
+                                 <div class="answer-content">
+                                     <h4>Data Warehouse Architecture</h4>
+                                     
+                                     <ul class="answer-bullets">
+                                         <li><strong>Architecture Layers:</strong>
+                                             <ul>
+                                                 <li><strong>Data Sources:</strong> Operational databases, external systems, flat files</li>
+                                                 <li><strong>ETL Process:</strong> Extract, Transform, Load data from sources</li>
+                                                 <li><strong>Storage Layer:</strong> Data warehouse and data marts for processed data</li>
+                                                 <li><strong>Access Layer:</strong> OLAP tools, reporting systems, query interfaces</li>
+                                             </ul>
+                                         </li>
+                                         
+                                         <li><strong>Key Components:</strong>
+                                             <ul>
+                                                 <li>Metadata repository for data definitions</li>
+                                                 <li>Data quality and cleansing processes</li>
+                                                 <li>Security and access control mechanisms</li>
+                                                 <li>Backup and recovery systems</li>
+                                             </ul>
+                                         </li>
+                                     </ul>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Floating Action Button -->
+        <div class="fab" id="fab">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
