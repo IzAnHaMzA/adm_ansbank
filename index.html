@@ -47,11 +47,11 @@
                 <div class="overview-content">
                     <div class="stats-grid">
                         <div class="stat-card">
-                            <div class="stat-number">20</div>
+                            <div class="stat-number">21</div>
                             <div class="stat-label">Total Questions</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-number">10</div>
+                            <div class="stat-number">11</div>
                             <div class="stat-label">4-Mark Questions</div>
                         </div>
                          <div class="stat-card">
@@ -59,7 +59,7 @@
                              <div class="stat-label">2-Mark Questions</div>
                          </div>
                          <div class="stat-card">
-                             <div class="stat-number">60</div>
+                             <div class="stat-number">64</div>
                              <div class="stat-label">Total Marks</div>
                          </div>
                     </div>
@@ -717,6 +717,91 @@
                                                     <span>Raw Data Lake</span>
                                                     <span>Curated Data</span>
                                                     <span>Data Warehouse</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 11 -->
+                    <div class="question-card" data-question="11">
+                        <div class="question-header">
+                            <span class="question-number">Q11</span>
+                            <span class="marks">4 Marks</span>
+                        </div>
+                        <div class="question-content">
+                            <h3>Explain Database Architecture with diagram</h3>
+                            <div class="answer" id="answer-11">
+                                <div class="answer-header">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Answer</span>
+                                </div>
+                                <div class="answer-content">
+                                    <h4>Database Architecture</h4>
+                                    
+                                    <div class="diagram-container">
+                                        <h5>Database Architecture Diagram</h5>
+                                        <div class="database-architecture-diagram">
+                                            <img src="WhatsApp Image 2025-10-06 at 18.32.37_84303d47.jpg" alt="Database Architecture Diagram" class="architecture-image">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="architecture-explanation">
+                                        <h5><i class="fas fa-sitemap"></i> Database Architecture Components</h5>
+                                        
+                                        <div class="architecture-components">
+                                            <div class="component">
+                                                <h6><i class="fas fa-users"></i> External Level (View Level)</h6>
+                                                <p>User interface layer that provides different views of the database for different users. Each user sees only the data they are authorized to access.</p>
+                                                <ul>
+                                                    <li>Multiple user views</li>
+                                                    <li>Data abstraction</li>
+                                                    <li>Security and privacy</li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="component">
+                                                <h6><i class="fas fa-cogs"></i> Conceptual Level (Logical Level)</h6>
+                                                <p>Global view of the entire database structure. Defines the logical structure, relationships, and constraints without physical implementation details.</p>
+                                                <ul>
+                                                    <li>Entity-Relationship model</li>
+                                                    <li>Data integrity constraints</li>
+                                                    <li>Global data model</li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="component">
+                                                <h6><i class="fas fa-hdd"></i> Internal Level (Physical Level)</h6>
+                                                <p>Physical storage structure of the database. Describes how data is stored on storage devices, including file organization and indexing.</p>
+                                                <ul>
+                                                    <li>File organization</li>
+                                                    <li>Indexing methods</li>
+                                                    <li>Storage allocation</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="architecture-benefits">
+                                            <h5><i class="fas fa-star"></i> Benefits of Three-Level Architecture</h5>
+                                            <div class="benefits-grid">
+                                                <div class="benefit">
+                                                    <h6><i class="fas fa-shield-alt"></i> Data Independence</h6>
+                                                    <p>Changes at one level don't affect other levels, providing flexibility and maintainability.</p>
+                                                </div>
+                                                <div class="benefit">
+                                                    <h6><i class="fas fa-users"></i> User Views</h6>
+                                                    <p>Different users can have customized views of the same database.</p>
+                                                </div>
+                                                <div class="benefit">
+                                                    <h6><i class="fas fa-cogs"></i> System Evolution</h6>
+                                                    <p>Database can evolve without affecting existing applications.</p>
+                                                </div>
+                                                <div class="benefit">
+                                                    <h6><i class="fas fa-lock"></i> Security</h6>
+                                                    <p>Access control can be implemented at the external level.</p>
                                                 </div>
                                             </div>
                                         </div>
