@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSY Answer Bank - Operating System Concepts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-cogs"></i>
+                <h1>OSY Answer Bank</h1>
+                <span class="subtitle">Operating System Concepts & Fundamentals</span>
+            </div>
+            <div class="navigation">
+                <button class="nav-btn" data-section="overview">Overview</button>
+                <button class="nav-btn" data-section="2marks">2-Mark Questions</button>
+                <button class="nav-btn active" data-section="4marks">4-Mark Questions</button>
+                <button class="nav-btn" data-section="concepts">Key Concepts</button>
+                <a href="index.html" class="nav-btn adm-link">
+                    <i class="fas fa-database"></i>
+                    ADM Questions
+                </a>
+            </div>
+            <div class="search-container">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search questions, answers, or concepts..." id="searchInput">
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Overview Section -->
+            <section id="overview" class="questions-section">
+                <h2 class="section-title">
+                    <i class="fas fa-chart-line"></i>
+                    Overview
+                </h2>
+                <p class="section-subtitle">Operating System Concepts & Fundamentals</p>
+                <div class="overview-content">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">18</div>
+                            <div class="stat-label">Total Questions</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">9</div>
+                            <div class="stat-label">4-Mark Questions</div>
+                        </div>
+                         <div class="stat-card">
+                             <div class="stat-number">9</div>
+                             <div class="stat-label">2-Mark Questions</div>
+                         </div>
+                         <div class="stat-card">
+                             <div class="stat-number">54</div>
+                             <div class="stat-label">Total Marks</div>
+                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4 Marks Questions Section -->
+            <section id="4marks" class="questions-section active">
+                <h2 class="section-title">
+                    <i class="fas fa-star"></i>
+                    4-Mark Questions
+                </h2>
+                <p class="section-subtitle">Detailed Explanations & Implementations</p>
+                
+                <div class="questions-grid">
+                    <!-- Question 1 -->
+                    <div class="question-card" data-question="1">
+                        <div class="question-header">
+                            <span class="question-number">1</span>
+                            <span class="question-title">Differentiate between MFT & MVT</span>
+                        </div>
+                        <div class="answer" id="answer-1">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>MFT vs MVT - Memory Management Techniques</h4>
+                                
+                                <div class="comparison-grid">
+                                    <div class="comparison-item">
+                                        <h4><i class="fas fa-table"></i> MFT (Multiprogramming with Fixed Tasks)</h4>
+                                        <ul>
+                                            <li><strong>Memory Division:</strong> Memory is divided into fixed-size partitions</li>
+                                            <li><strong>Partition Size:</strong> Each partition has predetermined size</li>
+                                            <li><strong>Job Allocation:</strong> Jobs are allocated to partitions that can accommodate them</li>
+                                            <li><strong>Internal Fragmentation:</strong> High internal fragmentation due to fixed sizes</li>
+                                            <li><strong>Memory Utilization:</strong> Lower memory utilization</li>
+                                            <li><strong>Implementation:</strong> Simpler to implement and manage</li>
+                                            <li><strong>Overhead:</strong> Less overhead in memory management</li>
+                                        </ul>
+                                    </div>
+                                    <div class="comparison-item">
+                                        <h4><i class="fas fa-expand-arrows-alt"></i> MVT (Multiprogramming with Variable Tasks)</h4>
+                                        <ul>
+                                            <li><strong>Memory Division:</strong> Memory is divided into variable-size partitions</li>
+                                            <li><strong>Partition Size:</strong> Partitions are created dynamically based on job requirements</li>
+                                            <li><strong>Job Allocation:</strong> Jobs are allocated exactly the memory they need</li>
+                                            <li><strong>Internal Fragmentation:</strong> No internal fragmentation</li>
+                                            <li><strong>Memory Utilization:</strong> Higher memory utilization</li>
+                                            <li><strong>Implementation:</strong> More complex to implement</li>
+                                            <li><strong>Overhead:</strong> Higher overhead due to dynamic allocation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="detailed-explanation">
+                                    <h5><i class="fas fa-lightbulb"></i> Key Differences Explained:</h5>
+                                    <div class="explanation-grid">
+                                        <div class="explanation-item">
+                                            <h6>Memory Allocation:</h6>
+                                            <p>MFT uses fixed partitions while MVT uses dynamic partitions that adjust to job sizes.</p>
+                                        </div>
+                                        <div class="explanation-item">
+                                            <h6>Fragmentation:</h6>
+                                            <p>MFT suffers from internal fragmentation, MVT may have external fragmentation.</p>
+                                        </div>
+                                        <div class="explanation-item">
+                                            <h6>Efficiency:</h6>
+                                            <p>MVT provides better memory utilization but requires more complex management.</p>
+                                        </div>
+                                        <div class="explanation-item">
+                                            <h6>Complexity:</h6>
+                                            <p>MFT is simpler to implement, MVT requires sophisticated memory management algorithms.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="question-card" data-question="2">
+                        <div class="question-header">
+                            <span class="question-number">2</span>
+                            <span class="question-title">Draw the diagram of linked file allocation method & explain it</span>
+                        </div>
+                        <div class="answer" id="answer-2">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>Linked File Allocation Method</h4>
+                                
+                                <p>Linked file allocation is a dynamic storage allocation technique where each file is stored as a linked list of disk blocks. Each block contains a pointer to the next block in the sequence.</p>
+                                
+                                <div class="diagram-container">
+                                    <h4>Linked File Allocation Diagram</h4>
+                                    <div class="diagram">
+                                        <div class="diagram-center">
+                                            <div class="center-node">File Allocation Table</div>
+                                        </div>
+                                        <div class="diagram-branches">
+                                            <div class="branch" data-type="file">
+                                                <div class="branch-node">File A</div>
+                                                <div class="branch-details">Start: Block 5<br>Size: 3 blocks</div>
+                                            </div>
+                                            <div class="branch" data-type="blocks">
+                                                <div class="branch-node">Block Chain</div>
+                                                <div class="branch-details">5 → 12 → 8<br>Data + Pointer</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <ul class="answer-bullets">
+                                    <li><strong>How it Works:</strong>
+                                        <ul>
+                                            <li>Each file is represented by a linked list of disk blocks</li>
+                                            <li>Each block contains data and a pointer to the next block</li>
+                                            <li>File allocation table stores the starting block address</li>
+                                            <li>Last block contains a null pointer indicating end of file</li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>Advantages:</strong>
+                                        <ul>
+                                            <li>No external fragmentation - any free block can be used</li>
+                                            <li>Files can grow dynamically without pre-allocation</li>
+                                            <li>Efficient use of disk space</li>
+                                            <li>Simple to implement</li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>Disadvantages:</strong>
+                                        <ul>
+                                            <li>Sequential access only - random access is slow</li>
+                                            <li>Overhead of storing pointers in each block</li>
+                                            <li>Reliability issues - if one pointer is corrupted, entire file is lost</li>
+                                            <li>Not suitable for direct access applications</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="question-card" data-question="3">
+                        <div class="question-header">
+                            <span class="question-number">3</span>
+                            <span class="question-title">Draw and explain directory structure of a file system in terms of single level, two level and tree structure with example</span>
+                        </div>
+                        <div class="answer" id="answer-3">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>Directory Structures in File Systems</h4>
+                                
+                                <div class="directory-structures">
+                                    <div class="structure-type">
+                                        <h5><i class="fas fa-folder"></i> Single Level Directory</h5>
+                                        <div class="diagram">
+                                            <div class="center-node">Root Directory</div>
+                                            <div class="directory-items">
+                                                <div class="item">file1.txt</div>
+                                                <div class="item">file2.txt</div>
+                                                <div class="item">file3.txt</div>
+                                                <div class="item">program.exe</div>
+                                            </div>
+                                        </div>
+                                        <p><strong>Characteristics:</strong> All files are stored in a single directory. Simple but limited - no organization, naming conflicts possible.</p>
+                                    </div>
+                                    
+                                    <div class="structure-type">
+                                        <h5><i class="fas fa-sitemap"></i> Two Level Directory</h5>
+                                        <div class="diagram">
+                                            <div class="center-node">Root Directory</div>
+                                            <div class="directory-branches">
+                                                <div class="branch">
+                                                    <div class="branch-node">User1</div>
+                                                    <div class="branch-details">file1.txt<br>file2.txt</div>
+                                                </div>
+                                                <div class="branch">
+                                                    <div class="branch-node">User2</div>
+                                                    <div class="branch-details">file1.txt<br>file3.txt</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p><strong>Characteristics:</strong> Each user has their own directory. Solves naming conflicts but still limited organization.</p>
+                                    </div>
+                                    
+                                    <div class="structure-type">
+                                        <h5><i class="fas fa-tree"></i> Tree Structure Directory</h5>
+                                        <div class="diagram">
+                                            <div class="center-node">Root (/)</div>
+                                            <div class="tree-structure">
+                                                <div class="tree-branch">
+                                                    <div class="branch-node">home</div>
+                                                    <div class="sub-branches">
+                                                        <div class="sub-branch">user1</div>
+                                                        <div class="sub-branch">user2</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tree-branch">
+                                                    <div class="branch-node">bin</div>
+                                                    <div class="sub-branches">
+                                                        <div class="sub-branch">ls</div>
+                                                        <div class="sub-branch">cp</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tree-branch">
+                                                    <div class="branch-node">etc</div>
+                                                    <div class="sub-branches">
+                                                        <div class="sub-branch">config</div>
+                                                        <div class="sub-branch">passwd</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p><strong>Characteristics:</strong> Hierarchical structure with unlimited depth. Most flexible and commonly used in modern systems.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="comparison-table">
+                                    <h5>Directory Structure Comparison</h5>
+                                    <div class="comparison-row header">
+                                        <div>Structure</div>
+                                        <div>Advantages</div>
+                                        <div>Disadvantages</div>
+                                        <div>Use Case</div>
+                                    </div>
+                                    <div class="comparison-row">
+                                        <div>Single Level</div>
+                                        <div>Simple, fast access</div>
+                                        <div>No organization, naming conflicts</div>
+                                        <div>Small systems</div>
+                                    </div>
+                                    <div class="comparison-row">
+                                        <div>Two Level</div>
+                                        <div>User isolation, no conflicts</div>
+                                        <div>Limited organization</div>
+                                        <div>Multi-user systems</div>
+                                    </div>
+                                    <div class="comparison-row">
+                                        <div>Tree Structure</div>
+                                        <div>Unlimited depth, flexible</div>
+                                        <div>Complex path management</div>
+                                        <div>Modern operating systems</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Question 4 -->
+                    <div class="question-card" data-question="4">
+                        <div class="question-header">
+                            <span class="question-number">4</span>
+                            <span class="question-title">Give a page reference with 3 pages frames calculate page fault with optimal LRU page replacement algorithm p,1,2,0,3,0,4,2,4,0,3,2,1,2,0,1,7</span>
+                        </div>
+                        <div class="answer" id="answer-4">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>Page Replacement Algorithms - Optimal vs LRU</h4>
+                                
+                                <p><strong>Page Reference String:</strong> p,1,2,0,3,0,4,2,4,0,3,2,1,2,0,1,7</p>
+                                <p><strong>Number of Frames:</strong> 3</p>
+                                
+                                <div class="algorithm-comparison">
+                                    <div class="algorithm">
+                                        <h5><i class="fas fa-star"></i> Optimal Page Replacement</h5>
+                                        <div class="page-table">
+                                            <div class="table-header">
+                                                <span>Reference</span>
+                                                <span>Frame 1</span>
+                                                <span>Frame 2</span>
+                                                <span>Frame 3</span>
+                                                <span>Page Fault</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>p</span>
+                                                <span>p</span>
+                                                <span>-</span>
+                                                <span>-</span>
+                                                <span>✓</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>1</span>
+                                                <span>p</span>
+                                                <span>1</span>
+                                                <span>-</span>
+                                                <span>✓</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>2</span>
+                                                <span>p</span>
+                                                <span>1</span>
+                                                <span>2</span>
+                                                <span>✓</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>0</span>
+                                                <span>0</span>
+                                                <span>1</span>
+                                                <span>2</span>
+                                                <span>✓</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>3</span>
+                                                <span>0</span>
+                                                <span>3</span>
+                                                <span>2</span>
+                                                <span>✓</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>0</span>
+                                                <span>0</span>
+                                                <span>3</span>
+                                                <span>2</span>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>4</span>
+                                                <span>0</span>
+                                                <span>3</span>
+                                                <span>4</span>
+                                                <span>✓</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>2</span>
+                                                <span>2</span>
+                                                <span>3</span>
+                                                <span>4</span>
+                                                <span>✓</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>4</span>
+                                                <span>2</span>
+                                                <span>3</span>
+                                                <span>4</span>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>0</span>
+                                                <span>2</span>
+                                                <span>0</span>
+                                                <span>4</span>
+                                                <span>✓</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>3</span>
+                                                <span>2</span>
+                                                <span>0</span>
+                                                <span>3</span>
+                                                <span>✓</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>2</span>
+                                                <span>2</span>
+                                                <span>0</span>
+                                                <span>3</span>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>1</span>
+                                                <span>2</span>
+                                                <span>1</span>
+                                                <span>3</span>
+                                                <span>✓</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>2</span>
+                                                <span>2</span>
+                                                <span>1</span>
+                                                <span>3</span>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>0</span>
+                                                <span>2</span>
+                                                <span>1</span>
+                                                <span>0</span>
+                                                <span>✓</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>1</span>
+                                                <span>2</span>
+                                                <span>1</span>
+                                                <span>0</span>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>7</span>
+                                                <span>7</span>
+                                                <span>1</span>
+                                                <span>0</span>
+                                                <span>✓</span>
+                                            </div>
+                                        </div>
+                                        <p><strong>Total Page Faults (Optimal):</strong> 11</p>
+                                    </div>
+                                    
+                                    <div class="algorithm">
+                                        <h5><i class="fas fa-clock"></i> LRU Page Replacement</h5>
+                                        <p><strong>Total Page Faults (LRU):</strong> 12</p>
+                                        <p><strong>Explanation:</strong> LRU replaces the least recently used page when a page fault occurs. It maintains a history of page usage and removes the page that hasn't been used for the longest time.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="algorithm-analysis">
+                                    <h5>Algorithm Analysis</h5>
+                                    <ul>
+                                        <li><strong>Optimal Algorithm:</strong> Provides minimum possible page faults but requires future knowledge</li>
+                                        <li><strong>LRU Algorithm:</strong> Practical implementation that approximates optimal behavior</li>
+                                        <li><strong>Performance:</strong> Optimal: 11 faults, LRU: 12 faults (91.7% efficiency)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="question-card" data-question="5">
+                        <div class="question-header">
+                            <span class="question-number">5</span>
+                            <span class="question-title">Explain swapping with diagram & example</span>
+                        </div>
+                        <div class="answer" id="answer-5">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>Swapping in Operating Systems</h4>
+                                
+                                <p>Swapping is a memory management technique where processes are moved between main memory and secondary storage (disk) to allow more processes to run than can fit in physical memory.</p>
+                                
+                                <div class="swapping-diagram">
+                                    <h5>Swapping Process Diagram</h5>
+                                    <div class="diagram">
+                                        <div class="swapping-flow">
+                                            <div class="flow-step">
+                                                <div class="step-icon"><i class="fas fa-memory"></i></div>
+                                                <div class="step-content">
+                                                    <h6>Main Memory</h6>
+                                                    <div class="memory-blocks">
+                                                        <div class="block active">Process A</div>
+                                                        <div class="block active">Process B</div>
+                                                        <div class="block empty">Free</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flow-arrow">
+                                                <i class="fas fa-exchange-alt"></i>
+                                            </div>
+                                            <div class="flow-step">
+                                                <div class="step-icon"><i class="fas fa-hdd"></i></div>
+                                                <div class="step-content">
+                                                    <h6>Swap Space (Disk)</h6>
+                                                    <div class="memory-blocks">
+                                                        <div class="block swapped">Process C</div>
+                                                        <div class="block swapped">Process D</div>
+                                                        <div class="block empty">Free</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="swapping-example">
+                                    <h5>Swapping Example</h5>
+                                    <div class="example-scenario">
+                                        <h6>Scenario:</h6>
+                                        <p>Main memory has 3 frames, but 5 processes need to run</p>
+                                        
+                                        <div class="step-by-step">
+                                            <div class="step">
+                                                <div class="step-number">1</div>
+                                                <div class="step-content">
+                                                    <h6>Initial State</h6>
+                                                    <p>Processes A, B, C loaded in main memory</p>
+                                                </div>
+                                            </div>
+                                            <div class="step">
+                                                <div class="step-number">2</div>
+                                                <div class="step-content">
+                                                    <h6>Process D Arrives</h6>
+                                                    <p>Process C swapped out to disk, Process D loaded</p>
+                                                </div>
+                                            </div>
+                                            <div class="step">
+                                                <div class="step-number">3</div>
+                                                <div class="step-content">
+                                                    <h6>Process E Arrives</h6>
+                                                    <p>Process A swapped out, Process E loaded</p>
+                                                </div>
+                                            </div>
+                                            <div class="step">
+                                                <div class="step-number">4</div>
+                                                <div class="step-content">
+                                                    <h6>Process C Needed</h6>
+                                                    <p>Process B swapped out, Process C swapped in from disk</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <ul class="answer-bullets">
+                                    <li><strong>Advantages of Swapping:</strong>
+                                        <ul>
+                                            <li>Allows more processes to run than physical memory can hold</li>
+                                            <li>Increases degree of multiprogramming</li>
+                                            <li>Better CPU utilization</li>
+                                            <li>Enables running large programs on limited memory</li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>Disadvantages of Swapping:</strong>
+                                        <ul>
+                                            <li>High overhead due to disk I/O operations</li>
+                                            <li>Context switching time increases</li>
+                                            <li>Requires sufficient disk space for swap area</li>
+                                            <li>Can cause thrashing if overused</li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>When Swapping Occurs:</strong>
+                                        <ul>
+                                            <li>When a higher priority process needs memory</li>
+                                            <li>When a process has been idle for a long time</li>
+                                            <li>When system runs out of physical memory</li>
+                                            <li>During memory compaction operations</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="question-card" data-question="6">
+                        <div class="question-header">
+                            <span class="question-number">6</span>
+                            <span class="question-title">Describe variable partitioning technique of memory management</span>
+                        </div>
+                        <div class="answer" id="answer-6">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>Variable Partitioning Memory Management</h4>
+                                
+                                <p>Variable partitioning is a dynamic memory allocation technique where memory is divided into variable-sized partitions based on the actual size requirements of processes.</p>
+                                
+                                <div class="partitioning-diagram">
+                                    <h5>Variable Partitioning Example</h5>
+                                    <div class="diagram">
+                                        <div class="memory-layout">
+                                            <div class="memory-block process" style="height: 30%;">Process A (30KB)</div>
+                                            <div class="memory-block free" style="height: 10%;">Free (10KB)</div>
+                                            <div class="memory-block process" style="height: 25%;">Process B (25KB)</div>
+                                            <div class="memory-block process" style="height: 20%;">Process C (20KB)</div>
+                                            <div class="memory-block free" style="height: 15%;">Free (15KB)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <ul class="answer-bullets">
+                                    <li><strong>How Variable Partitioning Works:</strong>
+                                        <ul>
+                                            <li>Memory is initially one large free block</li>
+                                            <li>When a process arrives, it's allocated exactly the memory it needs</li>
+                                            <li>Partitions are created dynamically based on process size</li>
+                                            <li>When a process terminates, its memory becomes available</li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>Memory Allocation Strategies:</strong>
+                                        <ul>
+                                            <li><strong>First Fit:</strong> Allocate first available block that fits</li>
+                                            <li><strong>Best Fit:</strong> Allocate smallest available block that fits</li>
+                                            <li><strong>Worst Fit:</strong> Allocate largest available block</li>
+                                            <li><strong>Next Fit:</strong> Start searching from last allocation point</li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>Advantages:</strong>
+                                        <ul>
+                                            <li>No internal fragmentation</li>
+                                            <li>Better memory utilization than fixed partitioning</li>
+                                            <li>Flexible allocation based on actual needs</li>
+                                            <li>Can accommodate processes of varying sizes</li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>Disadvantages:</strong>
+                                        <ul>
+                                            <li>External fragmentation occurs over time</li>
+                                            <li>Complex memory management required</li>
+                                            <li>Memory compaction may be needed</li>
+                                            <li>Higher overhead for allocation/deallocation</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 7 -->
+                    <div class="question-card" data-question="7">
+                        <div class="question-header">
+                            <span class="question-number">7</span>
+                            <span class="question-title">Describe necessary condition for deadlock</span>
+                        </div>
+                        <div class="answer" id="answer-7">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>Necessary Conditions for Deadlock</h4>
+                                
+                                <p>Deadlock occurs when two or more processes are blocked forever, waiting for each other to release resources. Four necessary conditions must be present simultaneously for a deadlock to occur.</p>
+                                
+                                <div class="deadlock-conditions">
+                                    <div class="condition">
+                                        <h5><i class="fas fa-lock"></i> 1. Mutual Exclusion</h5>
+                                        <p>At least one resource must be held in a non-sharable mode. Only one process can use the resource at a time.</p>
+                                        <div class="example">
+                                            <strong>Example:</strong> Printer, tape drive, or any exclusive resource
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="condition">
+                                        <h5><i class="fas fa-hand-paper"></i> 2. Hold and Wait</h5>
+                                        <p>A process must be holding at least one resource and waiting to acquire additional resources held by other processes.</p>
+                                        <div class="example">
+                                            <strong>Example:</strong> Process A holds printer, waits for scanner held by Process B
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="condition">
+                                        <h5><i class="fas fa-ban"></i> 3. No Preemption</h5>
+                                        <p>Resources cannot be preempted. A resource can only be released voluntarily by the process holding it.</p>
+                                        <div class="example">
+                                            <strong>Example:</strong> Cannot force a process to release a printer it's using
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="condition">
+                                        <h5><i class="fas fa-circle"></i> 4. Circular Wait</h5>
+                                        <p>There must exist a circular chain of processes, each waiting for a resource held by the next process in the chain.</p>
+                                        <div class="example">
+                                            <strong>Example:</strong> P1 waits for R2, P2 waits for R3, P3 waits for R1
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="deadlock-example">
+                                    <h5>Deadlock Example</h5>
+                                    <div class="diagram">
+                                        <div class="deadlock-scenario">
+                                            <div class="process">Process A</div>
+                                            <div class="resource">Resource 1</div>
+                                            <div class="process">Process B</div>
+                                            <div class="resource">Resource 2</div>
+                                            <div class="connection">Holds</div>
+                                            <div class="connection">Waits for</div>
+                                            <div class="connection">Holds</div>
+                                            <div class="connection">Waits for</div>
+                                        </div>
+                                    </div>
+                                    <p><strong>Result:</strong> Both processes are blocked, waiting for each other's resources.</p>
+                                </div>
+                                
+                                <div class="deadlock-prevention">
+                                    <h5>Deadlock Prevention Strategies</h5>
+                                    <ul>
+                                        <li><strong>Eliminate Mutual Exclusion:</strong> Make resources shareable (not always possible)</li>
+                                        <li><strong>Eliminate Hold and Wait:</strong> Require processes to request all resources at once</li>
+                                        <li><strong>Allow Preemption:</strong> Force processes to release resources when needed</li>
+                                        <li><strong>Eliminate Circular Wait:</strong> Impose ordering on resource requests</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 8 -->
+                    <div class="question-card" data-question="8">
+                        <div class="question-header">
+                            <span class="question-number">8</span>
+                            <span class="question-title">Explain Bankers Algorithm to avoid Deadlock</span>
+                        </div>
+                        <div class="answer" id="answer-8">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>Banker's Algorithm for Deadlock Avoidance</h4>
+                                
+                                <p>The Banker's Algorithm is a deadlock avoidance algorithm that ensures the system never enters an unsafe state. It's named after banking systems where customers request loans.</p>
+                                
+                                <div class="bankers-algorithm">
+                                    <h5>Algorithm Components</h5>
+                                    <div class="algorithm-components">
+                                        <div class="component">
+                                            <h6>Available Resources</h6>
+                                            <p>Vector showing available instances of each resource type</p>
+                                        </div>
+                                        <div class="component">
+                                            <h6>Maximum Need</h6>
+                                            <p>Maximum resources each process may need</p>
+                                        </div>
+                                        <div class="component">
+                                            <h6>Allocation</h6>
+                                            <p>Resources currently allocated to each process</p>
+                                        </div>
+                                        <div class="component">
+                                            <h6>Need</h6>
+                                            <p>Remaining resources needed by each process (Max - Allocation)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="safety-algorithm">
+                                    <h5>Safety Algorithm Steps</h5>
+                                    <div class="algorithm-steps">
+                                        <div class="step">
+                                            <div class="step-number">1</div>
+                                            <div class="step-content">
+                                                <h6>Initialize</h6>
+                                                <p>Work = Available, Finish[i] = false for all processes</p>
+                                            </div>
+                                        </div>
+                                        <div class="step">
+                                            <div class="step-number">2</div>
+                                            <div class="step-content">
+                                                <h6>Find Process</h6>
+                                                <p>Find process i where Finish[i] = false and Need[i] ≤ Work</p>
+                                            </div>
+                                        </div>
+                                        <div class="step">
+                                            <div class="step-number">3</div>
+                                            <div class="step-content">
+                                                <h6>Update</h6>
+                                                <p>Work = Work + Allocation[i], Finish[i] = true</p>
+                                            </div>
+                                        </div>
+                                        <div class="step">
+                                            <div class="step-number">4</div>
+                                            <div class="step-content">
+                                                <h6>Check</h6>
+                                                <p>If all processes finished, system is safe</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bankers-example">
+                                    <h5>Banker's Algorithm Example</h5>
+                                    <div class="example-table">
+                                        <h6>System State:</h6>
+                                        <div class="table">
+                                            <div class="table-row header">
+                                                <span>Process</span>
+                                                <span>Allocation</span>
+                                                <span>Max</span>
+                                                <span>Need</span>
+                                                <span>Available</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>P0</span>
+                                                <span>0 1 0</span>
+                                                <span>7 5 3</span>
+                                                <span>7 4 3</span>
+                                                <span rowspan="4">3 3 2</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>P1</span>
+                                                <span>2 0 0</span>
+                                                <span>3 2 2</span>
+                                                <span>1 2 2</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>P2</span>
+                                                <span>3 0 2</span>
+                                                <span>9 0 2</span>
+                                                <span>6 0 0</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>P3</span>
+                                                <span>2 1 1</span>
+                                                <span>2 2 2</span>
+                                                <span>0 1 1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <ul class="answer-bullets">
+                                    <li><strong>Resource Request Algorithm:</strong>
+                                        <ul>
+                                            <li>Check if request ≤ need for the process</li>
+                                            <li>Check if request ≤ available resources</li>
+                                            <li>Tentatively allocate resources</li>
+                                            <li>Run safety algorithm to check if state is safe</li>
+                                            <li>If safe, grant request; otherwise, deny and restore state</li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>Advantages:</strong>
+                                        <ul>
+                                            <li>Prevents deadlock by avoiding unsafe states</li>
+                                            <li>Allows maximum resource utilization</li>
+                                            <li>Works with multiple resource types</li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><strong>Disadvantages:</strong>
+                                        <ul>
+                                            <li>Requires advance knowledge of maximum resource needs</li>
+                                            <li>High computational overhead</li>
+                                            <li>Number of processes must be fixed</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 9 -->
+                    <div class="question-card" data-question="9">
+                        <div class="question-header">
+                            <span class="question-number">9</span>
+                            <span class="question-title">Calculate AWT & ATAT,ART, using any one of the following algorithm</span>
+                        </div>
+                        <div class="answer" id="answer-9">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>CPU Scheduling Algorithms - Performance Metrics</h4>
+                                
+                                <p><strong>Performance Metrics:</strong></p>
+                                <ul>
+                                    <li><strong>AWT:</strong> Average Waiting Time</li>
+                                    <li><strong>ATAT:</strong> Average Turnaround Time</li>
+                                    <li><strong>ART:</strong> Average Response Time</li>
+                                </ul>
+                                
+                                <div class="scheduling-example">
+                                    <h5>Example: FCFS (First Come First Served) Algorithm</h5>
+                                    <p><strong>Processes:</strong> P1(24ms), P2(3ms), P3(3ms)</p>
+                                    
+                                    <div class="gantt-chart">
+                                        <h6>Gantt Chart:</h6>
+                                        <div class="chart">
+                                            <div class="time-slot" style="width: 24%;">P1 (0-24)</div>
+                                            <div class="time-slot" style="width: 3%;">P2 (24-27)</div>
+                                            <div class="time-slot" style="width: 3%;">P3 (27-30)</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="calculation-table">
+                                        <div class="table">
+                                            <div class="table-row header">
+                                                <span>Process</span>
+                                                <span>Arrival Time</span>
+                                                <span>Burst Time</span>
+                                                <span>Completion Time</span>
+                                                <span>Turnaround Time</span>
+                                                <span>Waiting Time</span>
+                                                <span>Response Time</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>P1</span>
+                                                <span>0</span>
+                                                <span>24</span>
+                                                <span>24</span>
+                                                <span>24</span>
+                                                <span>0</span>
+                                                <span>0</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>P2</span>
+                                                <span>0</span>
+                                                <span>3</span>
+                                                <span>27</span>
+                                                <span>27</span>
+                                                <span>24</span>
+                                                <span>24</span>
+                                            </div>
+                                            <div class="table-row">
+                                                <span>P3</span>
+                                                <span>0</span>
+                                                <span>3</span>
+                                                <span>30</span>
+                                                <span>30</span>
+                                                <span>27</span>
+                                                <span>27</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="metrics-calculation">
+                                        <h6>Calculations:</h6>
+                                        <ul>
+                                            <li><strong>AWT (Average Waiting Time):</strong> (0 + 24 + 27) / 3 = 17ms</li>
+                                            <li><strong>ATAT (Average Turnaround Time):</strong> (24 + 27 + 30) / 3 = 27ms</li>
+                                            <li><strong>ART (Average Response Time):</strong> (0 + 24 + 27) / 3 = 17ms</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="algorithm-comparison">
+                                    <h5>Algorithm Comparison</h5>
+                                    <div class="comparison-grid">
+                                        <div class="comparison-item">
+                                            <h6>FCFS</h6>
+                                            <ul>
+                                                <li>Simple to implement</li>
+                                                <li>Non-preemptive</li>
+                                                <li>Poor performance for short processes</li>
+                                                <li>Convoy effect</li>
+                                            </ul>
+                                        </div>
+                                        <div class="comparison-item">
+                                            <h6>SJF</h6>
+                                            <ul>
+                                                <li>Optimal for minimum waiting time</li>
+                                                <li>May cause starvation</li>
+                                                <li>Difficult to predict burst time</li>
+                                                <li>Non-preemptive version</li>
+                                            </ul>
+                                        </div>
+                                        <div class="comparison-item">
+                                            <h6>Round Robin</h6>
+                                            <ul>
+                                                <li>Fair scheduling</li>
+                                                <li>Preemptive</li>
+                                                <li>Good response time</li>
+                                                <li>Time quantum dependent</li>
+                                            </ul>
+                                        </div>
+                                        <div class="comparison-item">
+                                            <h6>Priority</h6>
+                                            <ul>
+                                                <li>High priority first</li>
+                                                <li>May cause starvation</li>
+                                                <li>Aging can prevent starvation</li>
+                                                <li>Can be preemptive or non-preemptive</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2 Marks Questions Section -->
+            <section id="2marks" class="questions-section">
+                <h2 class="section-title">
+                    <i class="fas fa-tree"></i>
+                    2 Marks Questions
+                </h2>
+                
+                <div class="questions-grid">
+                    <!-- Question 1 -->
+                    <div class="question-card" data-question="1">
+                        <div class="question-header">
+                            <span class="question-number">1</span>
+                            <span class="question-title">List any 4 file attributes & meanings</span>
+                        </div>
+                        <div class="answer" id="answer-1">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>File Attributes and Their Meanings</h4>
+                                
+                                <div class="file-attributes">
+                                    <div class="attribute">
+                                        <h5><i class="fas fa-file"></i> File Name</h5>
+                                        <p>Human-readable identifier for the file. Must be unique within a directory.</p>
+                                    </div>
+                                    <div class="attribute">
+                                        <h5><i class="fas fa-ruler"></i> File Size</h5>
+                                        <p>Number of bytes occupied by the file on storage device.</p>
+                                    </div>
+                                    <div class="attribute">
+                                        <h5><i class="fas fa-calendar"></i> Creation Time</h5>
+                                        <p>Timestamp when the file was first created in the system.</p>
+                                    </div>
+                                    <div class="attribute">
+                                        <h5><i class="fas fa-edit"></i> Modification Time</h5>
+                                        <p>Timestamp when the file content was last modified.</p>
+                                    </div>
+                                    <div class="attribute">
+                                        <h5><i class="fas fa-user"></i> Owner</h5>
+                                        <p>User ID of the file owner who has control over file permissions.</p>
+                                    </div>
+                                    <div class="attribute">
+                                        <h5><i class="fas fa-shield-alt"></i> Permissions</h5>
+                                        <p>Access rights (read, write, execute) for owner, group, and others.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="question-card" data-question="2">
+                        <div class="question-header">
+                            <span class="question-number">2</span>
+                            <span class="question-title">List file allocation method</span>
+                        </div>
+                        <div class="answer" id="answer-2">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>File Allocation Methods</h4>
+                                
+                                <div class="allocation-methods">
+                                    <div class="method">
+                                        <h5><i class="fas fa-table"></i> Contiguous Allocation</h5>
+                                        <p>File blocks are allocated in consecutive disk blocks. Simple but suffers from external fragmentation.</p>
+                                    </div>
+                                    <div class="method">
+                                        <h5><i class="fas fa-link"></i> Linked Allocation</h5>
+                                        <p>File blocks are linked together using pointers. No external fragmentation but poor random access.</p>
+                                    </div>
+                                    <div class="method">
+                                        <h5><i class="fas fa-sitemap"></i> Indexed Allocation</h5>
+                                        <p>Uses an index block to store pointers to file blocks. Good for random access but overhead of index block.</p>
+                                    </div>
+                                    <div class="method">
+                                        <h5><i class="fas fa-layer-group"></i> Multi-level Indexed</h5>
+                                        <p>Uses multiple levels of index blocks for large files. Supports very large files efficiently.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="question-card" data-question="3">
+                        <div class="question-header">
+                            <span class="question-number">3</span>
+                            <span class="question-title">Define virtual memory & paging</span>
+                        </div>
+                        <div class="answer" id="answer-3">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>Virtual Memory and Paging</h4>
+                                
+                                <div class="concept-definition">
+                                    <div class="definition">
+                                        <h5><i class="fas fa-memory"></i> Virtual Memory</h5>
+                                        <p>A memory management technique that allows programs to use more memory than physically available by using secondary storage as an extension of main memory.</p>
+                                        <ul>
+                                            <li>Creates illusion of large memory space</li>
+                                            <li>Allows programs larger than physical memory</li>
+                                            <li>Enables multiprogramming with limited RAM</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="definition">
+                                        <h5><i class="fas fa-file-alt"></i> Paging</h5>
+                                        <p>A memory management scheme where physical memory is divided into fixed-size blocks called frames, and logical memory is divided into same-size blocks called pages.</p>
+                                        <ul>
+                                            <li>Eliminates external fragmentation</li>
+                                            <li>Allows non-contiguous allocation</li>
+                                            <li>Uses page table for address translation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="question-card" data-question="4">
+                        <div class="question-header">
+                            <span class="question-number">4</span>
+                            <span class="question-title">Define Segmentation & compaction & Fragmentation</span>
+                        </div>
+                        <div class="answer" id="answer-4">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>Segmentation, Compaction, and Fragmentation</h4>
+                                
+                                <div class="memory-concepts">
+                                    <div class="concept">
+                                        <h5><i class="fas fa-puzzle-piece"></i> Segmentation</h5>
+                                        <p>Memory management technique where logical address space is divided into variable-sized segments based on program structure (code, data, stack).</p>
+                                        <ul>
+                                            <li>Segments have logical meaning</li>
+                                            <li>Variable size segments</li>
+                                            <li>Uses segment table for translation</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="concept">
+                                        <h5><i class="fas fa-compress-arrows-alt"></i> Compaction</h5>
+                                        <p>Process of moving allocated memory blocks to eliminate external fragmentation by placing all free memory in one contiguous block.</p>
+                                        <ul>
+                                            <li>Reduces external fragmentation</li>
+                                            <li>Requires process relocation</li>
+                                            <li>Expensive operation</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="concept">
+                                        <h5><i class="fas fa-puzzle-piece"></i> Fragmentation</h5>
+                                        <p>Waste of memory space due to inability to use available memory blocks effectively.</p>
+                                        <ul>
+                                            <li><strong>Internal:</strong> Unused space within allocated blocks</li>
+                                            <li><strong>External:</strong> Unused space between allocated blocks</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="question-card" data-question="5">
+                        <div class="question-header">
+                            <span class="question-number">5</span>
+                            <span class="question-title">Features of non Pre-emptive</span>
+                        </div>
+                        <div class="answer" id="answer-5">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>Features of Non-Preemptive Scheduling</h4>
+                                
+                                <div class="scheduling-features">
+                                    <div class="feature">
+                                        <h5><i class="fas fa-hand-paper"></i> Process Control</h5>
+                                        <p>Once a process starts executing, it continues until completion or voluntary release of CPU.</p>
+                                    </div>
+                                    <div class="feature">
+                                        <h5><i class="fas fa-clock"></i> No Interruption</h5>
+                                        <p>Running process cannot be interrupted by higher priority processes or time quantum expiration.</p>
+                                    </div>
+                                    <div class="feature">
+                                        <h5><i class="fas fa-exchange-alt"></i> Context Switching</h5>
+                                        <p>Context switching occurs only when process terminates or blocks for I/O operation.</p>
+                                    </div>
+                                    <div class="feature">
+                                        <h5><i class="fas fa-tasks"></i> Scheduling Decision</h5>
+                                        <p>Scheduling decisions are made only when CPU becomes idle or process blocks.</p>
+                                    </div>
+                                    <div class="feature">
+                                        <h5><i class="fas fa-balance-scale"></i> Fairness</h5>
+                                        <p>Ensures each process gets complete CPU time but may cause starvation of short processes.</p>
+                                    </div>
+                                    <div class="feature">
+                                        <h5><i class="fas fa-cogs"></i> Implementation</h5>
+                                        <p>Simpler to implement as no need to handle preemption and process state saving.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="question-card" data-question="6">
+                        <div class="question-header">
+                            <span class="question-number">6</span>
+                            <span class="question-title">Define Deadlock</span>
+                        </div>
+                        <div class="answer" id="answer-6">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>Deadlock Definition</h4>
+                                
+                                <div class="deadlock-definition">
+                                    <p><strong>Deadlock</strong> is a situation in a multi-process system where two or more processes are blocked forever, waiting for each other to release resources that they need to continue execution.</p>
+                                    
+                                    <div class="deadlock-characteristics">
+                                        <h5>Key Characteristics:</h5>
+                                        <ul>
+                                            <li><strong>Circular Wait:</strong> Processes form a circular chain of resource requests</li>
+                                            <li><strong>Resource Hold:</strong> Each process holds at least one resource</li>
+                                            <li><strong>Mutual Exclusion:</strong> Resources cannot be shared simultaneously</li>
+                                            <li><strong>No Preemption:</strong> Resources cannot be forcibly taken away</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="deadlock-example-simple">
+                                        <h5>Simple Example:</h5>
+                                        <p>Process A holds Resource 1 and waits for Resource 2<br>
+                                        Process B holds Resource 2 and waits for Resource 1<br>
+                                        <strong>Result:</strong> Both processes are stuck forever</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 7 -->
+                    <div class="question-card" data-question="7">
+                        <div class="question-header">
+                            <span class="question-number">7</span>
+                            <span class="question-title">Describe CPU & I/O burst cycle with diagram</span>
+                        </div>
+                        <div class="answer" id="answer-7">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>CPU and I/O Burst Cycle</h4>
+                                
+                                <p>Process execution alternates between CPU bursts (computation) and I/O bursts (waiting for I/O operations).</p>
+                                
+                                <div class="burst-cycle-diagram">
+                                    <h5>CPU-I/O Burst Cycle Diagram</h5>
+                                    <div class="diagram">
+                                        <div class="cycle-flow">
+                                            <div class="cycle-step">
+                                                <div class="step-icon"><i class="fas fa-microchip"></i></div>
+                                                <div class="step-content">
+                                                    <h6>CPU Burst</h6>
+                                                    <p>Process executes instructions</p>
+                                                </div>
+                                            </div>
+                                            <div class="cycle-arrow">→</div>
+                                            <div class="cycle-step">
+                                                <div class="step-icon"><i class="fas fa-hdd"></i></div>
+                                                <div class="step-content">
+                                                    <h6>I/O Burst</h6>
+                                                    <p>Process waits for I/O completion</p>
+                                                </div>
+                                            </div>
+                                            <div class="cycle-arrow">→</div>
+                                            <div class="cycle-step">
+                                                <div class="step-icon"><i class="fas fa-redo"></i></div>
+                                                <div class="step-content">
+                                                    <h6>Repeat</h6>
+                                                    <p>Cycle continues until termination</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="burst-characteristics">
+                                    <h5>Burst Characteristics:</h5>
+                                    <ul>
+                                        <li><strong>CPU Burst:</strong> Time spent executing instructions</li>
+                                        <li><strong>I/O Burst:</strong> Time spent waiting for I/O operations</li>
+                                        <li><strong>Cycle:</strong> Alternating pattern throughout process lifetime</li>
+                                        <li><strong>Termination:</strong> Process ends with final CPU burst</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 8 -->
+                    <div class="question-card" data-question="8">
+                        <div class="question-header">
+                            <span class="question-number">8</span>
+                            <span class="question-title">State any four criteria in CPU scheduling</span>
+                        </div>
+                        <div class="answer" id="answer-8">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>CPU Scheduling Criteria</h4>
+                                
+                                <div class="scheduling-criteria">
+                                    <div class="criterion">
+                                        <h5><i class="fas fa-clock"></i> CPU Utilization</h5>
+                                        <p>Percentage of time CPU is busy executing processes. Higher utilization indicates better system performance.</p>
+                                    </div>
+                                    <div class="criterion">
+                                        <h5><i class="fas fa-tachometer-alt"></i> Throughput</h5>
+                                        <p>Number of processes completed per unit time. Higher throughput means more work done.</p>
+                                    </div>
+                                    <div class="criterion">
+                                        <h5><i class="fas fa-hourglass-half"></i> Turnaround Time</h5>
+                                        <p>Total time from process submission to completion. Includes waiting time and execution time.</p>
+                                    </div>
+                                    <div class="criterion">
+                                        <h5><i class="fas fa-pause"></i> Waiting Time</h5>
+                                        <p>Total time process spends waiting in ready queue. Should be minimized for better performance.</p>
+                                    </div>
+                                    <div class="criterion">
+                                        <h5><i class="fas fa-bolt"></i> Response Time</h5>
+                                        <p>Time from submission to first response. Important for interactive systems.</p>
+                                    </div>
+                                    <div class="criterion">
+                                        <h5><i class="fas fa-balance-scale"></i> Fairness</h5>
+                                        <p>Equal treatment of all processes. No process should be starved of CPU time.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Question 9 -->
+                    <div class="question-card" data-question="9">
+                        <div class="question-header">
+                            <span class="question-number">9</span>
+                            <span class="question-title">Compare SJF & SRTN</span>
+                        </div>
+                        <div class="answer" id="answer-9">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Answer</span>
+                            </div>
+                            <div class="answer-content">
+                                <h4>SJF vs SRTN Comparison</h4>
+                                
+                                <div class="algorithm-comparison">
+                                    <div class="comparison-item">
+                                        <h4><i class="fas fa-sort-amount-down"></i> SJF (Shortest Job First)</h4>
+                                        <ul>
+                                            <li><strong>Type:</strong> Non-preemptive scheduling</li>
+                                            <li><strong>Selection:</strong> Process with shortest burst time</li>
+                                            <li><strong>Execution:</strong> Runs to completion</li>
+                                            <li><strong>Advantage:</strong> Minimum average waiting time</li>
+                                            <li><strong>Disadvantage:</strong> May cause starvation</li>
+                                            <li><strong>Use Case:</strong> Batch processing systems</li>
+                                        </ul>
+                                    </div>
+                                    <div class="comparison-item">
+                                        <h4><i class="fas fa-sort-amount-down-alt"></i> SRTN (Shortest Remaining Time Next)</h4>
+                                        <ul>
+                                            <li><strong>Type:</strong> Preemptive scheduling</li>
+                                            <li><strong>Selection:</strong> Process with shortest remaining time</li>
+                                            <li><strong>Execution:</strong> Can be interrupted</li>
+                                            <li><strong>Advantage:</strong> Better response time</li>
+                                            <li><strong>Disadvantage:</strong> Higher overhead</li>
+                                            <li><strong>Use Case:</strong> Interactive systems</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="key-differences">
+                                    <h5>Key Differences:</h5>
+                                    <ul>
+                                        <li><strong>Preemption:</strong> SJF is non-preemptive, SRTN is preemptive</li>
+                                        <li><strong>Decision Point:</strong> SJF decides at arrival, SRTN at every time quantum</li>
+                                        <li><strong>Overhead:</strong> SRTN has higher context switching overhead</li>
+                                        <li><strong>Starvation:</strong> Both can cause starvation of long processes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Concepts Section -->
+            <section id="concepts" class="questions-section">
+                <h2 class="section-title">
+                    <i class="fas fa-lightbulb"></i>
+                    Key Concepts
+                </h2>
+                <p class="section-subtitle">Essential Operating System Concepts & Definitions</p>
+                
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-icon">
+                            <i class="fas fa-memory"></i>
+                        </div>
+                        <div class="concept-content">
+                            <h3>Memory Management</h3>
+                            <p>Techniques for managing computer memory including partitioning, paging, segmentation, and virtual memory to optimize system performance.</p>
+                            <div class="concept-tags">
+                                <span class="tag">MFT</span>
+                                <span class="tag">MVT</span>
+                                <span class="tag">Paging</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <div class="concept-icon">
+                            <i class="fas fa-file"></i>
+                        </div>
+                        <div class="concept-content">
+                            <h3>File Systems</h3>
+                            <p>Methods for organizing and managing files on storage devices including allocation methods, directory structures, and file attributes.</p>
+                            <div class="concept-tags">
+                                <span class="tag">Allocation</span>
+                                <span class="tag">Directory</span>
+                                <span class="tag">Attributes</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <div class="concept-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="concept-content">
+                            <h3>CPU Scheduling</h3>
+                            <p>Algorithms for determining which process gets CPU time, including FCFS, SJF, Round Robin, and Priority scheduling with performance metrics.</p>
+                            <div class="concept-tags">
+                                <span class="tag">FCFS</span>
+                                <span class="tag">SJF</span>
+                                <span class="tag">Round Robin</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <div class="concept-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="concept-content">
+                            <h3>Deadlock Management</h3>
+                            <p>Prevention, avoidance, and detection of deadlocks using techniques like Banker's Algorithm and resource ordering to maintain system stability.</p>
+                            <div class="concept-tags">
+                                <span class="tag">Banker's</span>
+                                <span class="tag">Prevention</span>
+                                <span class="tag">Avoidance</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <div class="concept-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div class="concept-content">
+                            <h3>Process Management</h3>
+                            <p>Creation, scheduling, synchronization, and termination of processes including process states, context switching, and inter-process communication.</p>
+                            <div class="concept-tags">
+                                <span class="tag">Process</span>
+                                <span class="tag">Thread</span>
+                                <span class="tag">Synchronization</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <div class="concept-icon">
+                            <i class="fas fa-hdd"></i>
+                        </div>
+                        <div class="concept-content">
+                            <h3>Storage Management</h3>
+                            <p>Disk scheduling algorithms, file allocation methods, and storage optimization techniques to improve I/O performance and space utilization.</p>
+                            <div class="concept-tags">
+                                <span class="tag">Disk</span>
+                                <span class="tag">I/O</span>
+                                <span class="tag">Storage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Floating Action Button -->
+        <div class="fab" id="fab">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
