@@ -160,7 +160,7 @@
                                 <div class="diagram-container">
                                     <h4>Linked File Allocation Diagram</h4>
                                     <div class="linked-allocation-diagram">
-                                        <img src="image.png" alt="Linked File Allocation Diagram" class="allocation-image">
+                                        <img src="WhatsApp Image 2025-10-06 at 18.32.37_84303d47.jpg" alt="Linked File Allocation Diagram" class="allocation-image">
                                     </div>
                                 </div>
                                 
@@ -169,64 +169,19 @@
                                     
                                     <div class="explanation-sections">
                                         <div class="explanation-section">
-                                            <h6><i class="fas fa-hdd"></i> Disk Structure</h6>
-                                            <p>The diagram shows a disk divided into 32 blocks (numbered 0-31). Each block represents a storage unit on the disk where file data can be stored.</p>
+                                            <h6><i class="fas fa-link"></i> How It Works</h6>
+                                            <p>The diagram shows File A stored in non-contiguous blocks (13, 16, 21, 24, 26, 29). Each block contains data and a pointer to the next block. The directory stores only the start block (13) and end block (29).</p>
                                         </div>
                                         
                                         <div class="explanation-section">
-                                            <h6><i class="fas fa-link"></i> Linked Allocation Mechanism</h6>
-                                            <p>The <strong>red arrows</strong> show how blocks are linked together using pointers. Each allocated block contains both data and a pointer to the next block in the file sequence.</p>
-                                            <ul>
-                                                <li>Block 1 → Block 9</li>
-                                                <li>Block 9 → Block 16</li>
-                                                <li>Block 16 → Block 25</li>
-                                                <li>Block 25 → Block 10</li>
-                                                <li>Block 10 → Block 6</li>
-                                            </ul>
-                                        </div>
-                                        
-                                        <div class="explanation-section">
-                                            <h6><i class="fas fa-table"></i> Directory Entry</h6>
-                                            <p>The directory table shows the file "jeep" with:</p>
-                                            <ul>
-                                                <li><strong>Start Block:</strong> 9 (where the file begins)</li>
-                                                <li><strong>End Block:</strong> 25 (logical end of the file)</li>
-                                            </ul>
-                                            <p>The <strong>green lines</strong> connect the directory entry to the actual disk blocks.</p>
-                                        </div>
-                                        
-                                        <div class="explanation-section">
-                                            <h6><i class="fas fa-puzzle-piece"></i> Key Characteristics</h6>
-                                            <ul>
-                                                <li><strong>Non-contiguous Storage:</strong> File blocks are scattered across the disk</li>
-                                                <li><strong>Dynamic Growth:</strong> Files can grow by adding new blocks anywhere on the disk</li>
-                                                <li><strong>No External Fragmentation:</strong> Any free block can be used</li>
-                                                <li><strong>Sequential Access:</strong> Must follow pointers to read the entire file</li>
-                                                <li><strong>Overhead:</strong> Each block stores a pointer, reducing available data space</li>
-                                            </ul>
-                                        </div>
-                                        
-                                        <div class="explanation-section">
-                                            <h6><i class="fas fa-cogs"></i> How It Works</h6>
-                                            <ol>
-                                                <li>Directory stores the starting block address of the file</li>
-                                                <li>To read the file, system starts from the first block</li>
-                                                <li>Each block contains data and a pointer to the next block</li>
-                                                <li>System follows the chain until it reaches the end (null pointer)</li>
-                                                <li>New blocks can be added anywhere on the disk and linked to the chain</li>
-                                            </ol>
-                                        </div>
-                                        
-                                        <div class="explanation-section">
-                                            <h6><i class="fas fa-balance-scale"></i> Advantages vs Disadvantages</h6>
+                                            <h6><i class="fas fa-balance-scale"></i> Key Points</h6>
                                             <div class="pros-cons">
                                                 <div class="pros">
                                                     <h7>✅ Advantages:</h7>
                                                     <ul>
                                                         <li>No external fragmentation</li>
                                                         <li>Files can grow dynamically</li>
-                                                        <li>Efficient use of disk space</li>
-                                                        <li>Simple to implement</li>
+                                                        <li>Efficient disk space utilization</li>
                                                     </ul>
                                                 </div>
                                                 <div class="cons">
@@ -234,7 +189,6 @@
                                                     <ul>
                                                         <li>Poor random access performance</li>
                                                         <li>Overhead of storing pointers</li>
-                                                        <li>Reliability issues (one corrupted pointer breaks the chain)</li>
                                                         <li>Sequential access only</li>
                                                     </ul>
                                                 </div>
@@ -242,35 +196,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <ul class="answer-bullets">
-                                    <li><strong>How it Works:</strong>
-                                        <ul>
-                                            <li>Each file is represented by a linked list of disk blocks</li>
-                                            <li>Each block contains data and a pointer to the next block</li>
-                                            <li>File allocation table stores the starting block address</li>
-                                            <li>Last block contains a null pointer indicating end of file</li>
-                                        </ul>
-                                    </li>
-                                    
-                                    <li><strong>Advantages:</strong>
-                                        <ul>
-                                            <li>No external fragmentation - any free block can be used</li>
-                                            <li>Files can grow dynamically without pre-allocation</li>
-                                            <li>Efficient use of disk space</li>
-                                            <li>Simple to implement</li>
-                                        </ul>
-                                    </li>
-                                    
-                                    <li><strong>Disadvantages:</strong>
-                                        <ul>
-                                            <li>Sequential access only - random access is slow</li>
-                                            <li>Overhead of storing pointers in each block</li>
-                                            <li>Reliability issues - if one pointer is corrupted, entire file is lost</li>
-                                            <li>Not suitable for direct access applications</li>
-                                        </ul>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>

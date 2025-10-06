@@ -2699,6 +2699,56 @@ body::before {
     color: var(--primary-color);
     margin-bottom: 20px;
     font-family: 'Orbitron', monospace;
+}
+
+/* NoSQL Image Container Styles */
+.nosql-image-container {
+    margin-top: 30px;
+    padding: 25px;
+    background: var(--bg-card);
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.nosql-image-container h5 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-family: 'Orbitron', monospace;
+    font-size: 1.2rem;
+}
+
+.nosql-diagram-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow-card);
+    margin: 20px 0;
+    border: 2px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nosql-diagram-image:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-glow);
+}
+
+.image-explanation {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 212, 255, 0.05);
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.image-explanation p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.image-explanation strong {
+    color: var(--text-primary);
     font-size: 1.2rem;
     display: flex;
     align-items: center;
